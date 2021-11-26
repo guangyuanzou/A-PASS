@@ -1,0 +1,427 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+CAT parallel processing with MATLAB PID: 61293
+Initialising batch system... done.
+
+
+------------------------------------------------------------------------
+Running job #1
+------------------------------------------------------------------------
+Running 'Longitudinal Registration'
+Estimated noise sd for "/disk1/guangyuan/T1MN/20160123_211031Sleeppsg02nYanJiahao.nii" = 1.80713
+Estimated noise sd for "/disk1/guangyuan/T1MN/20160124_103422Sleeppsg02mYanJiahao.nii" = 1.9406
+Reduce bounding box for final resolution level.
+Use initial brainmask for final resolution level.
+APP:                                                              
+  Initialize                                                         22s
+  Estimate background                                                10s
+  Initial correction                                                 26s
+  Refine background                                                  12s
+  Final correction                                                   22s
+  Final scaling                                                      34s
+                                                                   140s
+Done    'Longitudinal Registration'
+Running 'CAT12: Segmentation (current release)'
+
+------------------------------------------------------------------------
+CAT12.7 r1742: 1/1:     ./T1MN/avg_20160123_211031Sleeppsg02nYanJiahao.n
+------------------------------------------------------------------------
+SANLM denoising (medium):                                           178s
+Internal resampling (1.00x0.50x0.50mm > 0.70x0.70x0.70mm):            5s
+APP: Rough bias correction:                                       
+  Initialize                                                         19s
+  Estimate background                                                 8s
+  Initial correction                                                 21s
+  Refine background                                                  10s
+  Final correction                                                   18s
+  Final scaling                                                      25s
+                                                                    119s
+Affine registration                                                  14s
+Affine registration                                                  26s
+SPM preprocessing 1 (estimate 1):                                    46s
+SPM preprocessing 1 (estimate 2):                                   128s
+SPM preprocessing 2 (write):                                      
+  Write Segmentation                                                 48s
+  Update Segmentation                                                27s
+  Update Skull-Stripping                                             89s
+  Update probability maps                                            15s
+                                                                    178s
+Global intensity correction:                                          9s
+SANLM denoising after intensity normalization (medium):              45s
+Fast registration                                                    57s
+Local adaptive segmentation (LASstr=0.50):                        
+  Prepare maps                                                        9s
+  Prepare partitions                                                  3s
+  Prepare segments (LASmod = 1.35)                                   26s
+  Estimate local tissue thresholds (WM)                              32s
+  Estimate local tissue thresholds (GM)                              33s
+  Estimate local tissue thresholds (CSF/BG)                           8s
+  Intensity transformation                                          114s
+  SANLM denoising after LAS (medium)                                 71s
+                                                                     71s
+ROI segmentation (partitioning):                                  
+  Atlas -> subject space                                             10s
+  Major structures                                                    1s
+  Ventricle detection                                                 2s
+  Blood vessel detection                                              3s
+  WMH detection (WMHCstr=0.50 > WMHCstr'=0.00)                        8s
+  Manual stroke lesion detection                                      0s
+  Closing of deep structures                                          0s
+  Side alignment                                                      1s
+  Final corrections                                                   6s
+                                                                     31s
+Blood vessel correction (BVCstr=0.50):                                1s
+Amap using initial SPM12 segmentations (MRF filter strength 0.05):   45s
+    AMAP peaks: [CSF,GM,WM] = [0.43±0.07,0.69±0.08,0.97±0.04]
+Final cleanup (gcutstr=0.25):                                     
+  Level 1 cleanup (ROI estimation)                                    7s
+  Level 1 cleanup (brain masking)                                     3s
+  Level 2 cleanup (CSF correction)                                    2s
+  Level 3 cleanup (CSF/WM PVE)                                        2s
+                                                                     14s
+Shooting registration is not required.
+Write result maps:                                                   50s
+Surface and thickness estimation:                                 
+lh:
+  Thickness estimation (0.50 mm³):                                
+    WM distance:                                                     71s
+    CSF distance:                                                    23s
+    PBT2x thickness:                                                 11s
+                                                                    113s
+  Create initial surface                                            167s
+  Topology correction and surface refinement:                       238s
+  Correction of central surface in highly folded areas               11s
+  Refine central surface                                            120s
+  Correction of central surface in highly folded areas 2             13s
+  Spherical mapping with areal smoothing                            152s
+  Spherical registration                                            247s
+    Euler number / defect number / defect size: -42 / 26 / 0.97% 
+
+rh:
+  Thickness estimation (0.50 mm³):                                
+    WM distance:                                                     49s
+    CSF distance:                                                    17s
+    PBT2x thickness:                                                 11s
+                                                                     85s
+  Create initial surface                                            163s
+  Topology correction and surface refinement:                       213s
+  Correction of central surface in highly folded areas                8s
+  Refine central surface                                             78s
+  Correction of central surface in highly folded areas 2             11s
+  Spherical mapping with areal smoothing                            127s
+  Spherical registration                                            235s
+    Euler number / defect number / defect size: -38 / 12 / 1.11% 
+
+Final surface processing results: 
+  Average thickness:                     2.7208 ± 0.8658 mm
+  Euler characteristic / defect size:    44 / 1.04%% 
+  Display thickness: /disk1/guangyuan/T1MN/surf/lh.thickness.avg_20160123_211031Sleeppsg02nYanJiahao
+  Display thickness: /disk1/guangyuan/T1MN/surf/rh.thickness.avg_20160123_211031Sleeppsg02nYanJiahao
+  Surface ROI estimation:                                         Surface and thickness estimation takes:                            2062s
+Quality check:                                                       35s
+[Warning: MATLAB has disabled some advanced graphics rendering features by
+switching to software OpenGL. For more information, click <a
+href="matlab:opengl('problems')">here</a>.] 
+Surface display suppressed due to OpenGL issues.
+WARNING: Can't display surface!
+Print 'Graphics' figure to: 
+  /disk1/guangyuan/T1MN/report/catreport_avg_20160123_211031Sleeppsg02nYanJiahao.pdf
+
+------------------------------------------------------------------------
+CAT preprocessing takes 55 minute(s) and 21 second(s).
+Image Quality Rating (IQR):  91.85% (A-)
+Segmentations are saved in /disk1/guangyuan/T1MN/mri
+Reports are saved in /disk1/guangyuan/T1MN/report
+------------------------------------------------------------------------
+
+Done    'CAT12: Segmentation (current release)'
+Running 'Longitudinal TPM creation'
+Process "./T1MN/mri/rp1avg_20160123_211031Sleeppsg02nYanJiahao_affine.nii" done > Display. 
+Done    'Longitudinal TPM creation'
+Running 'CAT12: Segmentation (current release)'
+
+------------------------------------------------------------------------
+CAT12.7 r1742: 1/2:        ./T1MN/r20160123_211031Sleeppsg02nYanJiahao.n
+------------------------------------------------------------------------
+SANLM denoising (medium):                                           127s
+Internal resampling (1.00x0.50x0.50mm > 0.70x0.70x0.70mm):            4s
+APP: Rough bias correction:                                       
+  Initialize                                                         15s
+  Estimate background                                                 6s
+  Initial correction                                                 17s
+  Refine background                                                   7s
+  Final correction                                                   16s
+  Final scaling                                                      22s
+                                                                     98s
+Affine registration                                               
+Use affine transformation from /disk1/guangyuan/T1MN/avg_20160123_211031Sleeppsg02nYanJiahao.nii
+    5s
+SPM preprocessing 1 (use prior):                                      0s
+SPM preprocessing 1 (estimate 2):                                   118s
+SPM preprocessing 2 (write):                                      
+  Write Segmentation                                                 40s
+  Update Segmentation                                                24s
+  Update Skull-Stripping                                             75s
+  Update probability maps                                            12s
+                                                                    151s
+Global intensity correction:                                          9s
+SANLM denoising after intensity normalization (medium):              45s
+Fast registration                                                    55s
+Local adaptive segmentation (LASstr=0.50):                        
+  Prepare maps                                                        8s
+  Prepare partitions                                                  3s
+  Prepare segments (LASmod = 1.35)                                   31s
+  Estimate local tissue thresholds (WM)                              34s
+  Estimate local tissue thresholds (GM)                              36s
+  Estimate local tissue thresholds (CSF/BG)                           7s
+  Intensity transformation                                          123s
+  SANLM denoising after LAS (medium)                                 77s
+                                                                     77s
+ROI segmentation (partitioning):                                  
+  Atlas -> subject space                                              8s
+  Major structures                                                    1s
+  Ventricle detection                                                 3s
+  Blood vessel detection                                              3s
+  WMH detection (WMHCstr=0.50 > WMHCstr'=0.00)                        8s
+  Manual stroke lesion detection                                      0s
+  Closing of deep structures                                          1s
+  Side alignment                                                      1s
+  Final corrections                                                   6s
+                                                                     32s
+Blood vessel correction (BVCstr=0.50):                                1s
+Amap using initial SPM12 segmentations (MRF filter strength 0.05):   55s
+    AMAP peaks: [CSF,GM,WM] = [0.43±0.07,0.69±0.08,0.97±0.04]
+Final cleanup (gcutstr=0.25):                                     
+  Level 1 cleanup (ROI estimation)                                    8s
+  Level 1 cleanup (brain masking)                                     3s
+  Level 2 cleanup (CSF correction)                                    2s
+  Level 3 cleanup (CSF/WM PVE)                                        2s
+                                                                     15s
+Optimized Shooting registration with 2.50:-0.25:1.50 mm (regstr=0.50):
+  Template: "/disk1/guangyuan/toolboxes/SPM12/toolbox/cat12/templates_volumes/Template_0_IXI555_MNI152_GS.nii"
+    1 | 2.50 | 0.0625  0.0000  0.0625
+    2 | 2.50 | 0.0610  0.0006  0.0616
+    3 | 2.50 | 0.0605  0.0009  0.0614
+   16 | 2.25 | 0.0604  0.0010  0.0613
+   17 | 2.25 | 0.0533  0.0019  0.0551
+   18 | 2.25 | 0.0515  0.0024  0.0538
+   30 | 2.00 | 0.0532  0.0037  0.0569
+   31 | 2.00 | 0.0490  0.0038  0.0527
+   32 | 2.00 | 0.0479  0.0043  0.0522
+   44 | 1.75 | 0.0481  0.0055  0.0537
+   45 | 1.75 | 0.0454  0.0054  0.0508
+   46 | 1.75 | 0.0448  0.0058  0.0506
+   58 | 1.50 | 0.0459  0.0067  0.0526
+   59 | 1.50 | 0.0422  0.0069  0.0491
+   60 | 1.50 | 0.0413  0.0075  0.0488
+Shooting registration with 2.50:-0.25:1.50 mm takes:                186s
+  Prepare output                                                     26s
+                                                                    212s
+  Jacobian determinant (RMS):  0.099087 
+           Template Matching:  0.124010 
+Write result maps:                                                  124s
+Surface and thickness estimation:                                 
+Use existing surface from /disk1/guangyuan/T1MN/avg_20160123_211031Sleeppsg02nYanJiahao as prior and thus skip many processing steps.
+
+lh:
+  Thickness estimation (0.50 mm³):                                
+    WM distance:                                                     59s
+    CSF distance:                                                    23s
+    PBT2x thickness:                                                 14s
+                                                                    105s
+  108s
+  Refine central surface                                            109s
+  Correction of central surface in highly folded areas 2             14s
+
+
+Use existing surface from /disk1/guangyuan/T1MN/avg_20160123_211031Sleeppsg02nYanJiahao as prior and thus skip many processing steps.
+rh:
+  Thickness estimation (0.50 mm³):                                
+    WM distance:                                                     65s
+    CSF distance:                                                    23s
+    PBT2x thickness:                                                 15s
+                                                                    112s
+  116s
+  Refine central surface                                             95s
+  Correction of central surface in highly folded areas 2             15s
+
+Final surface processing results: 
+  Average thickness:                     2.7137 ± 0.8532 mm
+  Euler characteristic / defect size:    44 / 1.04%% 
+  Display thickness: /disk1/guangyuan/T1MN/surf/lh.thickness.r20160123_211031Sleeppsg02nYanJiahao
+  Display thickness: /disk1/guangyuan/T1MN/surf/rh.thickness.r20160123_211031Sleeppsg02nYanJiahao
+  Surface ROI estimation:                                         Surface and thickness estimation takes:                             542s
+ROI estimation:                                                   
+  ROI estimation of 'cobra' atlas                                     8s
+  ROI estimation of 'neuromorphometrics' atlas                       20s
+  Write results                                                      20s
+                                                                     28s
+Quality check:                                                       43s
+Surface display suppressed due to OpenGL issues.
+WARNING: Can't display surface!
+Print 'Graphics' figure to: 
+  /disk1/guangyuan/T1MN/report/catreport_r20160123_211031Sleeppsg02nYanJiahao.pdf
+
+------------------------------------------------------------------------
+CAT preprocessing takes 32 minute(s) and 31 second(s).
+Image Quality Rating (IQR):  91.73% (A-)
+Segmentations are saved in /disk1/guangyuan/T1MN/mri
+Reports are saved in /disk1/guangyuan/T1MN/report
+Labels are saved in /disk1/guangyuan/T1MN/label
+------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------
+CAT12.7 r1742: 2/2:        ./T1MN/r20160124_103422Sleeppsg02mYanJiahao.n
+------------------------------------------------------------------------
+SANLM denoising (medium):                                           163s
+Internal resampling (1.00x0.50x0.50mm > 0.70x0.70x0.70mm):            5s
+APP: Rough bias correction:                                       
+  Initialize                                                         18s
+  Estimate background                                                 7s
+  Initial correction                                                 21s
+  Refine background                                                   9s
+  Final correction                                                   16s
+  Final scaling                                                      24s
+                                                                    113s
+Affine registration                                               
+Use affine transformation from /disk1/guangyuan/T1MN/avg_20160123_211031Sleeppsg02nYanJiahao.nii
+    5s
+SPM preprocessing 1 (use prior):                                      0s
+SPM preprocessing 1 (estimate 2):                                   112s
+SPM preprocessing 2 (write):                                      
+  Write Segmentation                                                 45s
+  Update Segmentation                                                24s
+  Update Skull-Stripping                                             74s
+  Update probability maps                                            13s
+                                                                    156s
+Global intensity correction:                                          9s
+SANLM denoising after intensity normalization (medium):              41s
+Fast registration                                                    55s
+Local adaptive segmentation (LASstr=0.50):                        
+  Prepare maps                                                       11s
+  Prepare partitions                                                  4s
+  Prepare segments (LASmod = 1.36)                                   26s
+  Estimate local tissue thresholds (WM)                              34s
+  Estimate local tissue thresholds (GM)                              36s
+  Estimate local tissue thresholds (CSF/BG)                           8s
+  Intensity transformation                                          122s
+  SANLM denoising after LAS (medium)                                 80s
+                                                                     80s
+ROI segmentation (partitioning):                                  
+  Atlas -> subject space                                              9s
+  Major structures                                                    1s
+  Ventricle detection                                                 3s
+  Blood vessel detection                                              3s
+  WMH detection (WMHCstr=0.50 > WMHCstr'=0.00)                        8s
+  Manual stroke lesion detection                                      0s
+  Closing of deep structures                                          1s
+  Side alignment                                                      1s
+  Final corrections                                                   5s
+                                                                     31s
+Blood vessel correction (BVCstr=0.50):                                1s
+Amap using initial SPM12 segmentations (MRF filter strength 0.05):   50s
+    AMAP peaks: [CSF,GM,WM] = [0.43±0.07,0.69±0.08,0.97±0.04]
+Final cleanup (gcutstr=0.25):                                     
+  Level 1 cleanup (ROI estimation)                                    7s
+  Level 1 cleanup (brain masking)                                     3s
+  Level 2 cleanup (CSF correction)                                    1s
+  Level 3 cleanup (CSF/WM PVE)                                        2s
+                                                                     13s
+Optimized Shooting registration with 2.50:-0.25:1.50 mm (regstr=0.50):
+  Template: "/disk1/guangyuan/toolboxes/SPM12/toolbox/cat12/templates_volumes/Template_0_IXI555_MNI152_GS.nii"
+    1 | 2.50 | 0.0620  0.0000  0.0620
+    2 | 2.50 | 0.0606  0.0006  0.0612
+    3 | 2.50 | 0.0602  0.0009  0.0610
+   16 | 2.25 | 0.0601  0.0009  0.0610
+   17 | 2.25 | 0.0531  0.0018  0.0550
+   18 | 2.25 | 0.0514  0.0023  0.0537
+   30 | 2.00 | 0.0531  0.0035  0.0566
+   31 | 2.00 | 0.0489  0.0038  0.0526
+   32 | 2.00 | 0.0478  0.0043  0.0521
+   44 | 1.75 | 0.0482  0.0053  0.0535
+   45 | 1.75 | 0.0455  0.0054  0.0508
+   46 | 1.75 | 0.0448  0.0058  0.0506
+   58 | 1.50 | 0.0459  0.0066  0.0525
+   59 | 1.50 | 0.0422  0.0069  0.0492
+   60 | 1.50 | 0.0414  0.0075  0.0489
+Shooting registration with 2.50:-0.25:1.50 mm takes:                184s
+  Prepare output                                                     24s
+                                                                    208s
+  Jacobian determinant (RMS):  0.100365 
+           Template Matching:  0.124169 
+Write result maps:                                                  107s
+Surface and thickness estimation:                                 
+Use existing surface from /disk1/guangyuan/T1MN/avg_20160123_211031Sleeppsg02nYanJiahao as prior and thus skip many processing steps.
+
+lh:
+  Thickness estimation (0.50 mm³):                                
+    WM distance:                                                     57s
+    CSF distance:                                                    22s
+    PBT2x thickness:                                                 12s
+                                                                     98s
+  101s
+  Refine central surface                                            105s
+  Correction of central surface in highly folded areas 2             12s
+
+
+Use existing surface from /disk1/guangyuan/T1MN/avg_20160123_211031Sleeppsg02nYanJiahao as prior and thus skip many processing steps.
+rh:
+  Thickness estimation (0.50 mm³):                                
+    WM distance:                                                     43s
+    CSF distance:                                                    17s
+    PBT2x thickness:                                                 12s
+                                                                     79s
+   82s
+  Refine central surface                                             74s
+  Correction of central surface in highly folded areas 2             12s
+
+Final surface processing results: 
+  Average thickness:                     2.7132 ± 0.8623 mm
+  Euler characteristic / defect size:    44 / 1.04%% 
+  Display thickness: /disk1/guangyuan/T1MN/surf/lh.thickness.r20160124_103422Sleeppsg02mYanJiahao
+  Display thickness: /disk1/guangyuan/T1MN/surf/rh.thickness.r20160124_103422Sleeppsg02mYanJiahao
+  Surface ROI estimation:                                         Surface and thickness estimation takes:                             458s
+ROI estimation:                                                   
+  ROI estimation of 'cobra' atlas                                    10s
+  ROI estimation of 'neuromorphometrics' atlas                       20s
+  Write results                                                      20s
+                                                                     30s
+Quality check:                                                       38s
+Surface display suppressed due to OpenGL issues.
+WARNING: Can't display surface!
+Print 'Graphics' figure to: 
+  /disk1/guangyuan/T1MN/report/catreport_r20160124_103422Sleeppsg02mYanJiahao.pdf
+
+------------------------------------------------------------------------
+CAT preprocessing takes 31 minute(s) and 17 second(s).
+Image Quality Rating (IQR):  91.68% (A-)
+Segmentations are saved in /disk1/guangyuan/T1MN/mri
+Reports are saved in /disk1/guangyuan/T1MN/report
+Labels are saved in /disk1/guangyuan/T1MN/label
+------------------------------------------------------------------------
+
+Done    'CAT12: Segmentation (current release)'
+Running 'Image Average'
+Done    'Image Average'
+Running 'Apply deformations (many images)'
+Display resampled /disk1/guangyuan/T1MN/mri/mwp1r20160123_211031Sleeppsg02nYanJiahao.nii
+Display resampled /disk1/guangyuan/T1MN/mri/mwp1r20160124_103422Sleeppsg02mYanJiahao.nii
+Display resampled /disk1/guangyuan/T1MN/mri/mwp2r20160123_211031Sleeppsg02nYanJiahao.nii
+Display resampled /disk1/guangyuan/T1MN/mri/mwp2r20160124_103422Sleeppsg02mYanJiahao.nii
+Done    'Apply deformations (many images)'
+Running 'Apply deformations (many images)'
+Display resampled /disk1/guangyuan/T1MN/wavg_20160123_211031Sleeppsg02nYanJiahao.nii
+Done    'Apply deformations (many images)'
+Running 'Move/Delete Files'
+Done    'Move/Delete Files'
+Done
+
