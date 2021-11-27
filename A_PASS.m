@@ -588,7 +588,7 @@ fclose(fi);
 
 
 cd(Cfg.apassdir)
-if Cfg.MRc+Cfg.BCGc+Cfg.score+Cfg.manualscore+Cfg.dicomsort+Cfg.dicom2nii+Cfg.fmriproc>0
+if Cfg.MRc+Cfg.BCGc+Cfg.autoscore+Cfg.manualscore+Cfg.dicomsort+Cfg.dicom2nii+Cfg.fmriproc>0
     subs_command = ['bash pipe_group_sub.sh -a ''',Cfg.apassdir,''' -b ''',rtpath,''' -c ''',subs,''' -d ',num2str(Cfg.MRc),...
         ' -e ',num2str(Cfg.BCGc),' -f ',num2str(Cfg.autoscore),' -g ',num2str(Cfg.manualscore),' -h ',num2str(Cfg.dicomsort),...
         ' -i ',num2str(Cfg.dicom2nii),' -j ',num2str(Cfg.fmriproc),' -k ',Cfg.pyenv, ' -l ',Cfg.conda_path,' 2>&1'];
