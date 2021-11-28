@@ -9,33 +9,28 @@ else
         subs(i).name=['sub',num2str(Cfg.subs(i),'%02d')];
     end
 end
-%rmdir('stats','s');
+rmdir('stats','s');
 mkdir('stats');
-cd stats
-delete('roinum.txt');
-froi=fopen('roinum.txt','w');
-fprintf(froi,num2str(length(Cfg.ROIlist)));
-fclose(froi)
-%cd([subs(1).name,'/nii/Results']);
-%direcs=dir('*_*');
-
-
-paraname={};
-if Cfg.ALFF==1
-    paraname=[paraname,'ALFF','fALFF'];
-end
-if Cfg.ReHo==1
-    paraname=[paraname,'ReHo'];
-end
-if Cfg.DC == 1
-    paraname=[paraname,'DegreeCentrality'];
-end
-if Cfg.FC==1;
-    paraname=[paraname,'FC'];
-end
-if Cfg.VMHC==1;
-    paraname=[paraname,'VMHC'];
-end
+% %cd([subs(1).name,'/nii/Results']);
+% %direcs=dir('*_*');
+% 
+% 
+% paraname={};
+% if Cfg.ALFF==1
+%     paraname=[paraname,'ALFF','fALFF'];
+% end
+% if Cfg.ReHo==1
+%     paraname=[paraname,'ReHo'];
+% end
+% if Cfg.DC == 1
+%     paraname=[paraname,'DegreeCentrality'];
+% end
+% if Cfg.FC==1;
+%     paraname=[paraname,'FC'];
+% end
+% if Cfg.VMHC==1;
+%     paraname=[paraname,'VMHC'];
+% end
 %roinum=0;
 % for i=1:length(direcs);
 %     x=strsplit(direcs(i).name,'_');
@@ -45,15 +40,21 @@ end
 %         paraname=[paraname,x{1}];
 %     end
 % end
-cd(root)
-cd('stats');
-for i=1:length(paraname)
-    if exist(paraname{i},'dir')
-    rmdir(paraname{i},'s');
-    end
-    mkdir(paraname{i});
-    
-end
+% 
+% cd(root)
+% cd('stats');
+% load('paraname.mat');
+% for i=1:length(paraname)
+%     if exist(paraname{i},'dir')
+%     rmdir(paraname{i},'s');
+%     end
+%     mkdir(paraname{i});
+%     
+% end
+paraname={'ALFF','fALFF','ReHo','DegreeCentrality','FC','VMHC'};
+is_eachsub=zeros(6,length(subs));
+roinum=zeros(1,length(subs));
+
 parfor i=1:length(subs)
    
         cd(root)
@@ -77,79 +78,84 @@ parfor i=1:length(subs)
             [~,id]=sort_nat({exclude_f1.name});
             exclude_f = exclude_f1(id);
             
-            
-            for j=1:length(res_dir)
-                cd(root)
-                cd(subs(i).name);
-                cd('nii')
-                
-                cd('RealignParameter');
-                dat = importdata(exclude_f(j).name);
-                if strcmp(dat{10,1},'None')
+            if length(res_dir)>0
+                for j=1:length(res_dir)
+                    cd(root)
+                    cd(subs(i).name);
+                    cd('nii')
                     
-                    
-                    for k=1:length(paraname)
-                        cd(root)
-                        cd(subs(i).name);
-                        cd('nii');
-                    
-                        if ismember(paraname(k),{'ALFF','fALFF','VMHC'})
-                            cd(res_dir(j).name)
+                    cd('RealignParameter');
+                    dat = importdata(exclude_f(j).name);
+                    if strcmp(dat{10,1},'None')
+                        
+                        
+                        for k=1:length(paraname)
+                            cd(root)
+                            cd(subs(i).name);
+                            cd('nii');
                             
-                            dirn=dir([paraname{k},'_*']);
-                            if length(length(dirn)==1)
-                                zfile=[];
-                                cd(dirn.name)
-                                zfile=dir(['z*',paraname{k},'*.nii']);
-                                copyfile(zfile(end).name,[root,'/stats/',paraname{k},'/',fn_st.filenames{j}(1:6),...
-                                    '_',subs(i).name,'_',fn_st.filenames{j}(7:end),'_',paraname{k},'.nii']);
+                            if ismember(paraname(k),{'ALFF','fALFF','VMHC'})
+                                cd(res_dir(j).name)
+                                
+                                dirn=dir([paraname{k},'_*']);
+                                if length(dirn)==1
+                                    is_eachsub(k,i)=1;
+                                    zfile=[];
+                                    cd(dirn.name)
+                                    zfile=dir(['z*',paraname{k},'*.nii']);
+                                    copyfile(zfile(end).name,[root,'/stats/',paraname{k},'/',fn_st.filenames{j}(1:6),...
+                                        '_',subs(i).name,'_',fn_st.filenames{j}(7:end),'_',paraname{k},'.nii']);
+                                elseif length(dirn)>1
+                                    error('something wrong while moving results');
+                                    
+                                end
+                            elseif strcmp(paraname{k},'FC')
+                                cd(res_dir(j).name)
+                                dirn = dir([paraname{k},'_*']);
+                                if length(dirn)==1
+                                    is_eachsub(k,i)=1;
+                                    zfile=[];
+                                    cd(dirn.name)
+                                    zfile=dir(['z*',paraname{k},'*.nii']);
+                                    %roinum=roinum+length(zfile);
+                                    %roinum
+                                    roinum(i)=length(zfile);
+                                    if length(zfile)==1
+                                        lab = strsplit(zfile(1).name,'Map')
+                                        copyfile(zfile(1).name,[root,'/stats/',paraname{k},'/',lab{1},'ROI1_',fn_st.filenames{j}(1:6),...
+                                            '_',subs(i).name,'_',fn_st.filenames{j}(7:end),'_',paraname{k},'.nii'])
+                                    else
+                                        for nz=1:length(zfile)
+                                            lab = strsplit(zfile(nz).name,'Map')
+                                            copyfile(zfile(nz).name,[root,'/stats/',paraname{k},'/',lab{1},'_',fn_st.filenames{j}(1:6),...
+                                                '_',subs(i).name,'_',fn_st.filenames{j}(7:end),'_',paraname{k},'.nii'])
+                                        end
+                                    end
+                                elseif length(dirn)>1
+                                    error('something wrong while moving results');
+                                end
                             else
-                                error('something wrong while moving results');
+                                cd(res_dirs(j).name)
+                                dirn=dir([paraname{k},'_*']);
+                                if length(dirn)==1
+                                    is_eachsub(k,i)==1;
+                                    zfile=[];
+                                    cd(dirn.name)
+                                    zfile=dir(['sz*',paraname{k},'*.nii']);
+                                    copyfile(zfile(end).name,[root,'/stats/',paraname{k},'/',fn_st.filenames{j}(1:6),'_',subs(i).name,'_',fn_st.filenames{j}(7:end),'_',paraname{k},'.nii']);
+                                elseif length(dirn)>1
+                                    error('something wrong while moving results');
+                                    
+                                end
+                                
+                                cd ..
                                 
                             end
-                        elseif strcmp(paraname{k},'FC')
-                            cd(res_dir(j).name)
-                            dirn = dir([paraname{k},'_*']);
-                            if length(length(dirn)==1)
-                                zfile=[];
-                                cd(dirn.name)
-                                zfile=dir(['z*',paraname{k},'*.nii']);
-                                %roinum=roinum+length(zfile);
-                                %roinum
-                                if length(zfile)==1
-                                    lab = strsplit(zfile(1).name,'Map')
-                                    copyfile(zfile(1).name,[root,'/stats/',paraname{k},'/',lab{1},'ROI1_',fn_st.filenames{j}(1:6),...
-                                    '_',subs(i).name,'_',fn_st.filenames{j}(7:end),'_',paraname{k},'.nii'])
-                                else
-                                for nz=1:length(zfile)
-                                    lab = strsplit(zfile(nz).name,'Map')
-                                    copyfile(zfile(nz).name,[root,'/stats/',paraname{k},'/',lab{1},'_',fn_st.filenames{j}(1:6),...
-                                    '_',subs(i).name,'_',fn_st.filenames{j}(7:end),'_',paraname{k},'.nii'])
-                                end
-                                end
-                            else
-                                error('something wrong while moving results');
-                            end
-                        else
-                            cd(res_dirs(j).name)
-                            dirn=dir([paraname{k},'_*']);
-                            if length(length(dirn)==1)
-                                zfile=[];
-                                cd(dirn.name)
-                                zfile=dir(['sz*',paraname{k},'*.nii']);
-                                copyfile(zfile(end).name,[root,'/stats/',paraname{k},'/',fn_st.filenames{j}(1:6),'_',subs(i).name,'_',fn_st.filenames{j}(7:end),'_',paraname{k},'.nii']);
-                            else
-                                error('something wrong while moving results');
-                                
-                            end
-                            
-                            cd ..
-                            
                         end
                     end
-                
+                    
+                end
             end
-        end
         
    
     end
@@ -163,13 +169,40 @@ cd stats
 %     fprintf(froi,[num2str(roinum),'\n']);
 %     fclose(froi);
 % end
-save('paraname.mat','paraname');
+paraname_towrite = {};
+for k=1:6
+    if length(unique(is_eachsub(k,:)))~=1
+        error(['Subject ',num2str(is_eachsub(k,find(is_eachsub==0))),' lacks ',parameter{k}]);
+        quit()
+    end
+    if unique(is_eachsub(k,:))==1
+        paraname_towrite=[paraname_towrite,paraname{k}];
+    end
+end
+cd(root)
+cd('stats');
+
+save('paraname.mat','paraname_towrite');
 delete('paraname.txt');
 g=fopen('paraname.txt','w');
-for i=1:length(paraname)
-    fprintf(g,[paraname{i},'\n']);
+for i=1:length(paraname_towrite)
+    fprintf(g,[paraname_towrite{i},'\n']);
 end
 fclose(g);
+
+if length(unique(roinum))~=1
+    error(['Inconsisten ROI numbers across subjects: ',num2str(roinum)])
+    quit()
+end
+
+delete('roinum.txt');
+froi=fopen('roinum.txt','w');
+fprintf(froi,num2str(unique(roinum)));
+fclose(froi)
+
+
+
+
 
 cpfilename={};
 cd(root)

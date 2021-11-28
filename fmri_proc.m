@@ -70,7 +70,7 @@ Cfg.SliceTiming.SliceOrder = sliceorder;
 Cfg.SliceTiming.SliceNumber = length(sliceorder);
 Cfg.SliceTiming.ReferenceSlice = sliceorder(ceil(length(sliceorder)/2));
 
-if ap.Cfg.metric_check==1
+if ap.Cfg.metrics==1
 Cfg.IsCalALFF = ap.Cfg.ALFF;
 Cfg.IsCalFC = ap.Cfg.FC;
 Cfg.IsCalVMHC = ap.Cfg.VMHC;
@@ -104,4 +104,17 @@ try
 end
 %ReHo,DC processing
 end
+
+addpath(apassdir);
+cd(root)
+load('APASSpara.mat');
+if isempty(Cfg.subs) 
+   subs=dir('sub*');
+else
+    for i=1:length(Cfg.subs);
+        subs(i).name=['sub',num2str(Cfg.subs(i),'%02d')];
+    end
+end
+%rmdir('stats','s');
+
 quit()
