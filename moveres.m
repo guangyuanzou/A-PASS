@@ -169,11 +169,18 @@ cd stats
 %     fprintf(froi,[num2str(roinum),'\n']);
 %     fclose(froi);
 % end
+for i=1:length(subs)
+    if length(unique(is_eachsub(:,i)))>1
+        error(['Subject', num2str(i),' lacks some metrics']);
+        quit()
+    end
+end
+
 paraname_towrite = {};
 for k=1:6
     if length(unique(is_eachsub(k,:)))~=1
-        error(['Subject ',num2str(is_eachsub(k,find(is_eachsub==0))),' lacks ',parameter{k}]);
-        quit()
+        warning(['Subject ',num2str(is_eachsub(k,find(is_eachsub==0))),' lacks ',parameter{k}]);
+        %quit()
     end
     if unique(is_eachsub(k,:))==1
         paraname_towrite=[paraname_towrite,paraname{k}];
@@ -190,14 +197,14 @@ for i=1:length(paraname_towrite)
 end
 fclose(g);
 
-if length(unique(roinum))~=1
+if length(unique(roinum))>2
     error(['Inconsisten ROI numbers across subjects: ',num2str(roinum)])
     quit()
 end
 
 delete('roinum.txt');
 froi=fopen('roinum.txt','w');
-fprintf(froi,num2str(unique(roinum)));
+fprintf(froi,num2str(max(roinum)));
 fclose(froi)
 
 
