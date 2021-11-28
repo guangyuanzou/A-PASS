@@ -89,7 +89,7 @@ toc
 load([apassdir,'/DPARSFA_templcomp_rehodc.mat']);
 cd(root);
 cd('nii');
-if ap.Cfg.metric_check==1
+if ap.Cfg.metrics==1
 Cfg.WorkingDir=rt;
 Cfg.DataProcessDir=rt;
 Cfg.FunctionalSessionNumber=length(Funs);
