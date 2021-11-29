@@ -105,16 +105,5 @@ end
 %ReHo,DC processing
 end
 
-addpath(apassdir);
-cd(root)
-load('APASSpara.mat');
-if isempty(Cfg.subs) 
-   subs=dir('sub*');
-else
-    for i=1:length(Cfg.subs);
-        subs(i).name=['sub',num2str(Cfg.subs(i),'%02d')];
-    end
-end
-%rmdir('stats','s');
 
 quit()

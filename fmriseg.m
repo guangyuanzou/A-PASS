@@ -10,6 +10,14 @@
 
 addpath(genpath([apassdir,'/toolboxes/SPM12']));
 cd(root)
+cd('nii')
+alld=dir();
+for i=3:length(alld)
+    if alld(i).isdir==1&strcmp(alld(i).name,'.')==0&strcmp(alld(i).name,'..')==0
+        rmdir(alld(i).name,'s');
+    end
+end
+cd(root)
 cd ..
 TR=0;
 if ~exist('TR.txt','file')==0
@@ -27,6 +35,10 @@ cd(sub_name)
 f=dir('*.txt');     
 %read txt files: scoring results                       
 lf =length(f);
+
+
+
+
 dpabi_num=0;
 filenames={};
 num_dir=0;

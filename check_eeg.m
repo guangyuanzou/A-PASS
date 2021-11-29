@@ -19,7 +19,7 @@ copyfile(scoresf,'./auto_stage/');
 config.scores = scores+1;
 config.scale = 150;
 config.epoch_num = 1;
-config.stages = {'W','N1','N2','N3','R','UNKNOWN'};
+config.stages = {'W','N1','N2','N3','R','UNK'};
 config.channels1 = {'F3','F4','C3','C4','O1','O2','E1','E2','EMG1','EMG2'};
 config.channels2 = {'F3','F4','C3','C4','O1','O2','EOG1','EOG2','EMG1','EMG2'};
 % -------------------------default settings------------------------------------------------
@@ -94,7 +94,7 @@ s.n3_button = uicontrol('Parent',s.hf,'Style','pushbutton','FontSize',15,'String
     'Position',[0.46 0.05 0.05 0.05],'BackgroundColor','r');
 s.r_button = uicontrol('Parent',s.hf,'Style','pushbutton','FontSize',15,'String','R','Units','normalized',...
     'Position',[0.53 0.05 0.05 0.05],'BackgroundColor','g');
-s.unk_button = uicontrol('Parent',s.hf,'Style','pushbutton','FontSize',15,'String','Unknown','Units','normalized',...
+s.unk_button = uicontrol('Parent',s.hf,'Style','pushbutton','FontSize',15,'String','Unk','Units','normalized',...
     'Position',[0.6 0.05 0.05 0.05],'BackgroundColor',[192,192,192]/255);
 s.last_button = uicontrol('Parent',s.hf,'Style','pushbutton','FontSize',15,'String','<','Units','normalized',...
     'Position',[0.7 0.05 0.05 0.05])

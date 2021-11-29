@@ -11,6 +11,7 @@ else
 end
 rmdir('stats','s');
 mkdir('stats');
+cd('stats')
 % %cd([subs(1).name,'/nii/Results']);
 % %direcs=dir('*_*');
 % 
@@ -52,11 +53,19 @@ mkdir('stats');
 %     
 % end
 paraname={'ALFF','fALFF','ReHo','DegreeCentrality','FC','VMHC'};
+
+for i=1:length(paraname);
+     mkdir(paraname{i})
+end
+
+
 is_eachsub=zeros(6,length(subs));
 roinum=zeros(1,length(subs));
 
 parfor i=1:length(subs)
-   
+        is_eachsub_in = is_eachsub(:,i);
+        roinum_in = roinum(i);
+        
         cd(root)
         cd(subs(i).name);
         
@@ -99,7 +108,7 @@ parfor i=1:length(subs)
                                 
                                 dirn=dir([paraname{k},'_*']);
                                 if length(dirn)==1
-                                    is_eachsub(k,i)=1;
+                                    is_eachsub_in(k)=1;
                                     zfile=[];
                                     cd(dirn.name)
                                     zfile=dir(['z*',paraname{k},'*.nii']);
@@ -113,20 +122,20 @@ parfor i=1:length(subs)
                                 cd(res_dir(j).name)
                                 dirn = dir([paraname{k},'_*']);
                                 if length(dirn)==1
-                                    is_eachsub(k,i)=1;
+                                    is_eachsub_in(k)=1;
                                     zfile=[];
                                     cd(dirn.name)
                                     zfile=dir(['z*',paraname{k},'*.nii']);
                                     %roinum=roinum+length(zfile);
                                     %roinum
-                                    roinum(i)=length(zfile);
+                                    roinum_in=length(zfile);
                                     if length(zfile)==1
-                                        lab = strsplit(zfile(1).name,'Map')
+                                        lab = strsplit(zfile(1).name,'Map');
                                         copyfile(zfile(1).name,[root,'/stats/',paraname{k},'/',lab{1},'ROI1_',fn_st.filenames{j}(1:6),...
                                             '_',subs(i).name,'_',fn_st.filenames{j}(7:end),'_',paraname{k},'.nii'])
                                     else
                                         for nz=1:length(zfile)
-                                            lab = strsplit(zfile(nz).name,'Map')
+                                            lab = strsplit(zfile(nz).name,'Map');
                                             copyfile(zfile(nz).name,[root,'/stats/',paraname{k},'/',lab{1},'_',fn_st.filenames{j}(1:6),...
                                                 '_',subs(i).name,'_',fn_st.filenames{j}(7:end),'_',paraname{k},'.nii'])
                                         end
@@ -138,7 +147,7 @@ parfor i=1:length(subs)
                                 cd(res_dirs(j).name)
                                 dirn=dir([paraname{k},'_*']);
                                 if length(dirn)==1
-                                    is_eachsub(k,i)==1;
+                                    is_eachsub_in(k)=1;
                                     zfile=[];
                                     cd(dirn.name)
                                     zfile=dir(['sz*',paraname{k},'*.nii']);
@@ -158,7 +167,9 @@ parfor i=1:length(subs)
             end
         
    
-    end
+        end
+    is_eachsub(:,i)=is_eachsub_in;
+    roinum(i)=roinum_in;
 end
 cd(root)
 cd stats
@@ -171,15 +182,16 @@ cd stats
 % end
 for i=1:length(subs)
     if length(unique(is_eachsub(:,i)))>1
-        error(['Subject', num2str(i),' lacks some metrics']);
-        quit()
+        warning(['Subject', num2str(subs(i).name),' lacks some metrics']);
+        id=find(is_eachsub(:,i)==0);
+        paraname(id)=[];
+        %quit()
     end
-endunique
-
+end 
 paraname_towrite = {};
-for k=1:6
+for k=1:length(paraname)
     if length(unique(is_eachsub(k,:)))~=1
-        warning(['Subject ',num2str(is_eachsub(k,find(is_eachsub==0))),' lacks ',parameter{k}]);
+        warning(['Subject ',num2str(is_eachsub(k,find(is_eachsub==0))),' lacks ',paraname{k}]);
         %quit()
     end
     if unique(is_eachsub(k,:))==1
@@ -189,11 +201,12 @@ end
 cd(root)
 cd('stats');
 
-save('paraname.mat','paraname_towrite');
+paraname=paraname_towrite;
+save('paraname.mat','paraname');
 delete('paraname.txt');
 g=fopen('paraname.txt','w');
-for i=1:length(paraname_towrite)
-    fprintf(g,[paraname_towrite{i},'\n']);
+for i=1:length(paraname)
+    fprintf(g,[paraname{i},'\n']);
 end
 fclose(g);
 

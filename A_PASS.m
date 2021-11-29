@@ -540,7 +540,7 @@ if ischar(filename)
 %     end
     if Cfg.voxelp == 0.001
         set(s.voxelp_pop,'value',1);
-    elseif Cfg.voxelp == 0.01
+    elseif Cfg.voxelp == 0.01/disk1/guangyuan/CMRServer148/testpipeline2
         set(s.voxelp_pop,'value',2);
     elseif Cfg.voxelp == 0.05
         set(s.voxelp_pop,'value',3);
@@ -588,7 +588,7 @@ fclose(fi);
 
 
 cd(Cfg.apassdir)
-if Cfg.MRc+Cfg.BCGc+Cfg.autoscore+Cfg.manualscore+Cfg.dicomsort+Cfg.dicom2nii+Cfg.fmriproc>0
+if Cfg.eegpre+Cfg.isscore+Cfg.fmriproc>0
     subs_command = ['bash pipe_group_sub.sh -a ''',Cfg.apassdir,''' -b ''',rtpath,''' -c ''',subs,''' -d ',num2str(Cfg.MRc),...
         ' -e ',num2str(Cfg.BCGc),' -f ',num2str(Cfg.autoscore),' -g ',num2str(Cfg.manualscore),' -h ',num2str(Cfg.dicomsort),...
         ' -i ',num2str(Cfg.dicom2nii),' -j ',num2str(Cfg.fmriproc),' -k ',Cfg.pyenv, ' -l ',Cfg.conda_path,' 2>&1'];

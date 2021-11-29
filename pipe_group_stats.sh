@@ -44,11 +44,17 @@ roinum=1
 echo $(date +%R)
 cd ${rtpath}/stats
 
+tempfifo=${apassdir}/$$.fifo
 trap 'exec 914>&-;exec 914<&-;exit 0' 2
 mkfifo $tempfifo
 exec 914<>$tempfifo
 rm -rf $tempfifo
 
+
+for ((i=1; i<=8; i++))
+do 
+   echo >&914
+done
 
 
 
@@ -83,14 +89,9 @@ wait
 echo $(date +%R)
 # 3dLMEr analysis (AFNI)----------------------------------------------------------
 
-tempfifo=$$.fifo
+#tempfifo=$$.fifo
 #$echo $tempfifo
 
-
-for ((i=1; i<=8; i++))
-do 
-   echo >&914
-done
 
 cd ${rtpath}/fwhmx
 for line in `cat sfnames.txt`

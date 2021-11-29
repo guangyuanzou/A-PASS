@@ -42,7 +42,7 @@ s.logo_text = uicontrol('Parent',s.hf,'Style','text','String','A-PASS','FontSize
     'position', [0.1 0.85 0.8 0.1],'FontAngle','italic','FontWeight','bold');
 s.working_dir_text = uicontrol('parent',s.hf,'style','text','string','Working directory:','FontSize',12,'units','normalized',...
     'position',[0.1 0.8 0.2 0.03],'HorizontalAlignment','left');
-s.working_dir_edit = uicontrol('parent',s.hf,'style','edit','units','normalized','string',cd,...
+s.working_dir_edit = uicontrol('parent',s.hf,'st/disk1/guangyuan/CMRServer148/testpipeline2yle','edit','units','normalized','string',cd,...
     'position',[0.3 0.8 0.4 0.04]);
 s.working_dir_pushbutton = uicontrol('parent',s.hf,'style','pushbutton','string','Open','units','normalized',...
     'position',[0.77 0.8 0.15 0.04],'FontSize',12);
@@ -540,7 +540,7 @@ if ischar(filename)
 %     end
     if Cfg.voxelp == 0.001
         set(s.voxelp_pop,'value',1);
-    elseif Cfg.voxelp == 0.01
+    elseif Cfg.voxelp == 0.01/disk1/guangyuan/CMRServer148/testpipeline2
         set(s.voxelp_pop,'value',2);
     elseif Cfg.voxelp == 0.05
         set(s.voxelp_pop,'value',3);
@@ -571,8 +571,8 @@ if isempty(Cfg.subs)
     for i = 1:length(subs_dir)
         subs=[subs,' ',subs_dir(i).name];
     end
-else/disk1/guangyuan/CMRServer148/testpipeline2
-    subs = [];/disk1/guangyuan/CMRServer148/testpipeline2
+else
+    subs = [];
     subs_n = Cfg.subs
     for i = 1:length(subs_n)
         subs = [subs,' sub',num2str(subs_n(i),'%02d')];
@@ -588,7 +588,7 @@ fclose(fi);
 
 
 cd(Cfg.apassdir)
-if Cfg.MRc+Cfg.BCGc+Cfg.autoscore+Cfg.manualscore+Cfg.dicomsort+Cfg.dicom2nii+Cfg.fmriproc>0
+if Cfg.eegpre+Cfg.isscore+Cfg.fmriproc>0
     subs_command = ['bash pipe_group_sub.sh -a ''',Cfg.apassdir,''' -b ''',rtpath,''' -c ''',subs,''' -d ',num2str(Cfg.MRc),...
         ' -e ',num2str(Cfg.BCGc),' -f ',num2str(Cfg.autoscore),' -g ',num2str(Cfg.manualscore),' -h ',num2str(Cfg.dicomsort),...
         ' -i ',num2str(Cfg.dicom2nii),' -j ',num2str(Cfg.fmriproc),' -k ',Cfg.pyenv, ' -l ',Cfg.conda_path,' 2>&1'];

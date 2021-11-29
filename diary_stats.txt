@@ -1,0 +1,113 @@
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+root =
+
+    '/disk1/guangyuan/testpipeline/a-pass/A-PASS'
+
+
+apassdir =
+
+    '/disk1/guangyuan/testpipeline/a-pass/A-PASS'
+
+>> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> {Undefined variable "parameter" or class "parameter".
+} 
+>> >> >> >> >> >> [Warning: File 'paraname.txt' not found.] 
+>> >> >> >> >> >> >> [Warning: File 'roinum.txt' not found.] 
+>> >> >> 
+ans =
+
+     0
+
+>> >> >> >> >> >> >> >> >> >> >> >> >> >> [Warning: File 'sfnames.txt' not found.] 
+>> >> >> >> Elapsed time is 3.071133 seconds.
+>> >> 04:56
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+root =
+
+    '/disk1/guangyuan/testpipeline/a-pass/A-PASS'
+
+
+apassdir =
+
+    '/disk1/guangyuan/testpipeline/a-pass/A-PASS'
+
+>> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> [Warning: File 'cov_num.txt' not found.] 
+>> >> >> 
+ans =
+
+     0
+
+>> >> >> >> >> >> >> 04:56
+04:56
+done
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+root =
+
+    '/disk1/guangyuan/testpipeline/a-pass/A-PASS/fwhmx'
+
+>> >> >> >> >> >> >> >> >> >> >> {Undefined function or variable 'b'.
+} 
+>> {Undefined function or variable 'b'.
+} 
+>> {Undefined function or variable 'c'.
+} 
+>> >> 
+f = 
+
+  0x1 empty struct array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+>> >> >> {Undefined function or variable 'num'.
+} 
+>> >> {Undefined function or variable 'c'.
+} 
+>> {Undefined function or variable 'c'.
+} 
+>> >> {Undefined function or variable 'acf_average'.
+} 
+>> >> {Undefined function or variable 'res'.
+} 
+>> >> ++ 3dClustSim: AFNI version=AFNI_20.2.10 (Aug  4 2020) [64-bit]
+++ Authored by: RW Cox and BD Ward
+++ 69047 voxels in mask (25.42% of total)
+[7m** FATAL ERROR:[0m -acf: 'a' value should be between 0 and 1 :-(
+** Program compile date = Aug  4 2020
+04:56

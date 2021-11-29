@@ -105,6 +105,7 @@ do
         #dicom sort (AFNI)-------------------------------
         if [ $dicnii = '1' ];then
            cd ${work_dir}
+           rm -rf nii/
            mkdir nii
            cd ${sortedpath}
            echo ${sortedpath}
