@@ -182,16 +182,17 @@ cd stats
 % end
 for i=1:length(subs)
     if length(unique(is_eachsub(:,i)))>1
-        warning(['Subject', num2str(subs(i).name),' lacks some metrics']);
+        error(['Subject', num2str(subs(i).name),' lacks some metrics']);
         id=find(is_eachsub(:,i)==0);
         paraname(id)=[];
+        
         %quit()
     end
 end 
 paraname_towrite = {};
 for k=1:length(paraname)
     if length(unique(is_eachsub(k,:)))~=1
-        warning(['Subject ',num2str(is_eachsub(k,find(is_eachsub==0))),' lacks ',paraname{k}]);
+        warning(['Subject ',num2str(subs(find(is_eachsub(k,:)==0)).name),' lacks ',paraname{k}]);
         %quit()
     end
     if unique(is_eachsub(k,:))==1
