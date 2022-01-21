@@ -26,11 +26,11 @@ elif [ "$p1" == "0.05" ];then
 fi
 cd fwhmx
 if  [ "$p2" == "0.05" ];then 
-    clustersize=` grep $volp 3dClustSim_acf.txt.NN2_2sided.1D | awk -F " " '{print $3}'`
+    clustersize=` grep $volp 3dClustSim_acf.txt.NN2_1sided.1D | awk -F " " '{print $3}'`
 elif [ "$p2" == "0.01" ];then
-    clustersize=` grep $volp 3dClustSim_acf.txt.NN2_2sided.1D | awk -F " " '{print $5}'`
+    clustersize=` grep $volp 3dClustSim_acf.txt.NN2_1sided.1D | awk -F " " '{print $5}'`
 elif [ "$p2" == "0.001" ];then
-    clustersize=` grep $volp 3dClustSim_acf.txt.NN2_2sided.1D | awk -F " " '{print $6}'`
+    clustersize=` grep $volp 3dClustSim_acf.txt.NN2_1sided.1D | awk -F " " '{print $6}'`
 fi
 
 #clustersize=` grep $volp 3dClustSim_acf.txt.NN2_2sided.1D | awk -F " " '{print $3}'`

@@ -51,7 +51,7 @@ for file_n = 1:lf
     inds=zeros(5,10000);
     a=load(f(file_n).name);
    
-    for j=1:5% 5 if REM also exists;4 if no REM
+    for j=1:4% 5 if REM also exists;4 if no REM
         inds(j,1:length(find(a==j-1)))=find(a==j-1);  
         
     end

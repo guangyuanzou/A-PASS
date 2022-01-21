@@ -95,7 +95,7 @@ parfor i=1:length(subs)
                     
                     cd('RealignParameter');
                     dat = importdata(exclude_f(j).name);
-                    if strcmp(dat{10,1},'None')
+                    if strcmp(dat{6,1},'None')
                         
                         
                         for k=1:length(paraname)
@@ -254,7 +254,7 @@ parfor i=1:length(subs)
         
         cd('RealignParameter');
         dat = importdata(exclude_f(j).name);
-        if strcmp(dat{10,1},'None')
+        if strcmp(dat{6,1},'None')
         cd(root)
         cd(subs(i).name);
         cd('nii'); 

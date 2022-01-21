@@ -40,18 +40,20 @@ cfg = get_config(BCGnetpath / 'config' / 'default_config_pred.yaml')
 cfg.d_data = work_dir / 'MRcEEGdata'
 cfg.d_model = work_dir / 'trained_models'
 cfg.d_output = work_dir / 'cleaned_EEGdata'
-d_output = cfg.d_output
+
+cfg.d_eval = work_dir / 'AAS_cleaned_data'
+cfg.str_eval = 'AAS'
 #cfg.num_epochs = 50
 cfg.d_root = BCGnetpath
 d_root = cfg.d_root
-#cfg.p_model_weights = d_root / 'default_weights' / 'default_rnn_model_20211216_033550'
+#cfg.p_model_weights = d_root / 'default_weights' / 'default_rnn_model_20210719_214617'
 cfg.p_model_weights = ''
 # The model_weights was trained on EEG data from EEG-fMRI recordings of 31 subjects
 
 for sub in subs:
   str_sub = sub
-  if not os.path.exists(work_dir /'BCGNetfigure'):
-    os.mkdir(work_dir / 'BCGNetfigure')
+  if not os.path.exists(cfg.d_data /'figure'):
+    os.mkdir(cfg.d_data / 'figure')
   # provide the name of the subject
   # provide the index of the runs to be used for training
   # if just a single run, then [1] or [2]
@@ -67,14 +69,10 @@ for sub in subs:
      raw = mne.io.read_raw_eeglab(file)
      #raw = mne.io.read_raw_eeglab(cfg.d_data.as_posix()+'/'+str_sub+'/'+str_sub+'_r0'+ str(vec_idx_run[0]) +'_raw.set')
      data_len = data_len + raw.n_times/ raw.info.get('sfreq')
-  if data_len > 600:
-     cfg.per_training = round(300/data_len,3)
-     cfg.per_valid = round(300/data_len, 3)
-     cfg.per_test = 1 - cfg.per_training - cfg.per_valid
-  else:
-     cfg.per_training = 0.4
-     cfg.per_valid = 0.4
-     cfg.per_test = 0.2
+  cfg.per_training = round(300/data_len,3)
+  cfg.per_valid = round(300/data_len, 3)
+  cfg.per_test = 1 - cfg.per_training - cfg.per_valid
+
   cfg.vec_str_eeg_channel = raw.ch_names
   # str_arch specifies the type of the model to be used
   # if str_arch is not provided then the default model (same as paper)
@@ -125,8 +123,9 @@ for sub in subs:
   # mode='valid' evaluates on validation set
   # mode='test' evaluates on test set
   #os.mkdir('/disk1/guangyuan/BCGnet'+sub)
-  s1.plot_random_epoch(str_ch_eeg='T8', mode='test',p_figure = Path(work_dir / 'BCGNetfigure'))
-  
+  s1.plot_random_epoch(str_ch_eeg='T8', mode='test',p_figure = Path(cfg.d_data / 'figure'))
+  s1.plot_random_epoch(str_ch_eeg='T8', mode='test',p_figure = Path(cfg.d_data / 'figure'))
+  s1.plot_random_epoch(str_ch_eeg='T8', mode='test',p_figure = Path(cfg.d_data / 'figure'))
   #Plot the power spectral density (PSD) from the mean/specified channel
   # mode='train' evaluates on training set
   # mode='valid' evaluates on validation set
@@ -134,8 +133,8 @@ for sub in subs:
   
   # str_ch_eeg='avg' plots the mean PSD across all channels
   # str_ch_eeg could also be set to standard EEG channel names, e.g. Pz, Fz, Oz etc.
-  #s1.plot_psd(str_ch_eeg='avg', mode='test')
-  s1.plot_psd(str_ch_eeg='T8', mode='test',p_figure = Path(work_dir / 'BCGNetfigure'))
+  s1.plot_psd(str_ch_eeg='avg', mode='test',p_figure = Path(cfg.d_data / 'figure'))
+  s1.plot_psd(str_ch_eeg='T8', mode='test',p_figure = Path(cfg.d_data / 'figure'))
   
   # save trained model
   #s1.save_model()

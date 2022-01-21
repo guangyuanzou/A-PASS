@@ -159,7 +159,7 @@ vitmodel = ViT(
     ).to(device)
 
 net = vit_crf(vitmodel,batch_first=True)
-net = torch.load(vitcrfpath + '/trained10ft99_vit-crf.pt',map_location=torch.device(device));
+net = torch.load(vitcrfpath + '/4c_99_vit-crf.pt',map_location=torch.device(device));
 net.eval()
 # Label values
 W = 0

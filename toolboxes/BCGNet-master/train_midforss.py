@@ -2,56 +2,45 @@
 """
 Created on Thu Jul 15 18:08:02 2021
   
-@author: ZOU Guangyuan
-To perform BCG artifact correction in A-PASS
-
-Adopting BCGNet
-Reference:
-BCGNet: Deep Learning Toolbox for BCG Artifact Reduction
-========================================================
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![License](https://img.shields.io/github/license/SASVDERDBGTYS/BCGNet)](https://opensource.org/licenses/MIT)
-[![doi](https://img.shields.io/badge/doi-10.1109%2FTBME.2020.3004548-blue)](https://ieeexplore.ieee.org/document/9124646)
-
-see APASS/toolboxes/BCGNet-master/README.md for detail
-
+@author: admin
 """
-import sys
-#BCGnetpath = sys.argv[0]
-work_dir = sys.argv[1]
-subs = [sys.argv[2]]
-#print(subs)
+  
 import os
-BCGnetpath = os.getcwd()
 import time
 from pathlib import Path
 from config import get_config
 from session import Session
 import mne.io
-import glob
 
-work_dir = Path(work_dir)
-BCGnetpath = Path(BCGnetpath)
 print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
-
+d_root = Path(os.getcwd())
   
-cfg = get_config(BCGnetpath / 'config' / 'default_config_pred.yaml')
+cfg = get_config(d_root / 'config' / 'default_config_pred.yaml')
 # whether load pretrained weights is determined in config as cfg.p_model_weights
-cfg.d_data = work_dir / 'MRcEEGdata'
-cfg.d_model = work_dir / 'trained_models'
-cfg.d_output = work_dir / 'cleaned_EEGdata'
-d_output = cfg.d_output
-#cfg.num_epochs = 50
-cfg.d_root = BCGnetpath
-d_root = cfg.d_root
-#cfg.p_model_weights = d_root / 'default_weights' / 'default_rnn_model_20211216_033550'
-cfg.p_model_weights = ''
-# The model_weights was trained on EEG data from EEG-fMRI recordings of 31 subjects
+cfg.d_data = Path('/disk1/guangyuan/BCGnet/data/')
+cfg.d_model = Path('/disk1/guangyuan/BCGnet/trained_models/')
+cfg.d_output = Path('/disk1/guangyuan/BCGnet/cleaned_datasets/')
 
+cfg.num_epochs = 100
+cfg.d_root = d_root
+cfg.p_model_weights = d_root / 'default_weights' / 'default_rnn_model_20211216_033550'
+#subs=['chenbingrong','chenbiqing','chenxiabin','fanzhipu','feinanxi','fengyanhui','ganshihui',
+#'guanbowei','guyonghao','hanmeizhen','hewei','linzijun','liufeng','liuxingyi','luyouping','sishangyu',
+#'songmingyu','wangluotong','wubaozhen','xiayan','xuping','yangjingfei','yangjixiang','yangpengcheng',
+#'yanzhanfeng','zhanghanbo','zhangyaoyu','zhangyaxin','zhengli','zhousizhong','zuodaqing']
+#subs = ['chenbingrong2','chenbiqing2']
+#subs=['zhangyaoyu']
+#subs=['chenbingrong','chenbiqing','chenxiabin','fanzhipu','feinanxi','fengyanhui','ganshihui',
+#'guanbowei','guyonghao','hanmeizhen','linzijun','liufeng','liuxingyi','sishangyu',
+#'songmingyu','wangluotong','wubaozhen','xiayan','xuping','yangjingfei','yangjixiang','yangpengcheng',
+#'yanzhanfeng','zhanghanbo','zhangyaoyu','zhangyaxin','zhengli','zuodaqing']
+subs=['caofenghua','changqing','cuiyanmei','duliyan','fuzuoce','gaohuirong','guofenglong','haofangzhou',
+'huangweiguo','liweijie','liwenjun','mayanwei','pengjian','suhairong','suncuiping2','wangchuntong',
+'zhangaijing','zhangqiang','zhangxi','zhaoyuanxin','mating','xuandongqing']
 for sub in subs:
   str_sub = sub
-  if not os.path.exists(work_dir /'BCGNetfigure'):
-    os.mkdir(work_dir / 'BCGNetfigure')
+  if not os.path.exists('/disk1/guangyuan/BCGnet/figure/'+sub):
+    os.mkdir('/disk1/guangyuan/BCGnet/figure/'+sub)
   # provide the name of the subject
   # provide the index of the runs to be used for training
   # if just a single run, then [1] or [2]
@@ -60,21 +49,14 @@ for sub in subs:
   # for a run from sub11 and run index 1
   # filename is presumed to be
   # subXX_r0X_
-  set_files = glob.glob(cfg.d_data.as_posix()+'/'+str_sub+'/'+str_sub+'*_raw.set')
-  vec_idx_run = [x+1 for x in range(len(set_files))] 
-  data_len = 0;
-  for file in set_files:
-     raw = mne.io.read_raw_eeglab(file)
-     #raw = mne.io.read_raw_eeglab(cfg.d_data.as_posix()+'/'+str_sub+'/'+str_sub+'_r0'+ str(vec_idx_run[0]) +'_raw.set')
-     data_len = data_len + raw.n_times/ raw.info.get('sfreq')
-  if data_len > 600:
-     cfg.per_training = round(300/data_len,3)
-     cfg.per_valid = round(300/data_len, 3)
-     cfg.per_test = 1 - cfg.per_training - cfg.per_valid
-  else:
-     cfg.per_training = 0.4
-     cfg.per_valid = 0.4
-     cfg.per_test = 0.2
+  vec_idx_run = [1]
+  
+  raw = mne.io.read_raw_eeglab(cfg.d_data.as_posix()+'/'+str_sub+'/'+str_sub+'_r0'+ str(vec_idx_run[0]) +'_raw.set')
+  data_len = raw.n_times/ raw.info.get('sfreq')
+  cfg.per_training = round(300/data_len,3)
+  cfg.per_valid = round(300/data_len, 3)
+  cfg.per_test = 1 - cfg.per_training - cfg.per_valid
+
   cfg.vec_str_eeg_channel = raw.ch_names
   # str_arch specifies the type of the model to be used
   # if str_arch is not provided then the default model (same as paper)
@@ -125,7 +107,7 @@ for sub in subs:
   # mode='valid' evaluates on validation set
   # mode='test' evaluates on test set
   #os.mkdir('/disk1/guangyuan/BCGnet'+sub)
-  s1.plot_random_epoch(str_ch_eeg='T8', mode='test',p_figure = Path(work_dir / 'BCGNetfigure'))
+  s1.plot_random_epoch(str_ch_eeg='T8', mode='test',p_figure = Path('/disk1/guangyuan/BCGnet/figure') / sub)
   
   #Plot the power spectral density (PSD) from the mean/specified channel
   # mode='train' evaluates on training set
@@ -135,10 +117,10 @@ for sub in subs:
   # str_ch_eeg='avg' plots the mean PSD across all channels
   # str_ch_eeg could also be set to standard EEG channel names, e.g. Pz, Fz, Oz etc.
   #s1.plot_psd(str_ch_eeg='avg', mode='test')
-  s1.plot_psd(str_ch_eeg='T8', mode='test',p_figure = Path(work_dir / 'BCGNetfigure'))
+  s1.plot_psd(str_ch_eeg='T8', mode='test',p_figure = Path('/disk1/guangyuan/BCGnet/figure') / sub)
   
   # save trained model
-  #s1.save_model()
+  # s1.save_model()
   
   # save cleaned data in .mat files
   # the saved .mat file has one field 'data' which contains the 

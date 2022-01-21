@@ -33,7 +33,7 @@ for file_n=1:length(f)
     if strcmp(eegtype,'.vhdr')
         EEG = pop_loadbv('.',f{file_n});
     elseif strcmp(eegtype,'.edf')
-        EEG = pop_biosig('.',f{file_n});
+        EEG = pop_biosig(f{file_n});
     elseif strcmp(eetype,'.CNT')
         EEG = pop_loadcnt('.',f{file_n});
     else

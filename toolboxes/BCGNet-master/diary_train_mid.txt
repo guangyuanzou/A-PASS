@@ -1,0 +1,3014 @@
+2021-12-19 21:31:51
+Reading /disk1/guangyuan/BCGnet/data/caofenghua/caofenghua_r01_raw.fdt
+Reading /disk1/guangyuan/BCGnet/data/caofenghua/caofenghua_r01_raw.fdt
+Reading 0 ... 734999  =      0.000 ...  7349.990 secs...
+
+Rejecting 182 epochs out of a total of 2449
+2267 epochs remaining...
+
+Model: "functional_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+ecg_input (InputLayer)       [(None, None, 1)]         0         
+_________________________________________________________________
+bidirectional (Bidirectional (None, None, 32)          1824      
+_________________________________________________________________
+bidirectional_1 (Bidirection (None, None, 32)          4800      
+_________________________________________________________________
+dense (Dense)                (None, None, 8)           264       
+_________________________________________________________________
+dropout (Dropout)            (None, None, 8)           0         
+_________________________________________________________________
+bidirectional_2 (Bidirection (None, None, 32)          2496      
+_________________________________________________________________
+bidirectional_3 (Bidirection (None, None, 128)         37632     
+_________________________________________________________________
+dense_1 (Dense)              (None, None, 63)          8127      
+=================================================================
+Total params: 55,143
+Trainable params: 55,143
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+93/93 - 46s - loss: 0.5634 - val_loss: 0.5320
+Epoch 2/100
+93/93 - 41s - loss: 0.5023 - val_loss: 0.5118
+Epoch 3/100
+93/93 - 38s - loss: 0.4816 - val_loss: 0.5113
+Epoch 4/100
+93/93 - 38s - loss: 0.4721 - val_loss: 0.5184
+Epoch 5/100
+93/93 - 37s - loss: 0.4650 - val_loss: 0.5203
+Epoch 6/100
+93/93 - 37s - loss: 0.4593 - val_loss: 0.5035
+Epoch 7/100
+93/93 - 36s - loss: 0.4502 - val_loss: 0.4943
+Epoch 8/100
+93/93 - 36s - loss: 0.4428 - val_loss: 0.5041
+Epoch 9/100
+93/93 - 37s - loss: 0.4355 - val_loss: 0.5072
+Epoch 10/100
+93/93 - 36s - loss: 0.4402 - val_loss: 0.5018
+Epoch 11/100
+93/93 - 36s - loss: 0.4299 - val_loss: 0.4945
+Epoch 12/100
+93/93 - 38s - loss: 0.4186 - val_loss: 0.5050
+Epoch 13/100
+93/93 - 41s - loss: 0.4140 - val_loss: 0.4903
+Epoch 14/100
+93/93 - 41s - loss: 0.4046 - val_loss: 0.5046
+Epoch 15/100
+93/93 - 41s - loss: 0.4245 - val_loss: 0.4944
+Epoch 16/100
+93/93 - 38s - loss: 0.4128 - val_loss: 0.4954
+Epoch 17/100
+93/93 - 40s - loss: 0.3960 - val_loss: 0.5225
+Epoch 18/100
+93/93 - 40s - loss: 0.4151 - val_loss: 0.4847
+Epoch 19/100
+93/93 - 41s - loss: 0.3905 - val_loss: 0.5093
+Epoch 20/100
+93/93 - 40s - loss: 0.3804 - val_loss: 0.4866
+Epoch 21/100
+93/93 - 41s - loss: 0.3923 - val_loss: 0.5014
+Epoch 22/100
+93/93 - 41s - loss: 0.4198 - val_loss: 0.5017
+Epoch 23/100
+93/93 - 41s - loss: 0.3846 - val_loss: 0.4901
+Epoch 24/100
+93/93 - 41s - loss: 0.3610 - val_loss: 0.5019
+Epoch 25/100
+93/93 - 41s - loss: 0.3570 - val_loss: 0.5012
+Epoch 26/100
+93/93 - 41s - loss: 0.3490 - val_loss: 0.4897
+Epoch 27/100
+93/93 - 40s - loss: 0.3484 - val_loss: 0.5077
+Epoch 28/100
+93/93 - 41s - loss: 0.3482 - val_loss: 0.4835
+Epoch 29/100
+93/93 - 41s - loss: 0.3402 - val_loss: 0.4930
+Epoch 30/100
+93/93 - 41s - loss: 0.3303 - val_loss: 0.4967
+Epoch 31/100
+93/93 - 41s - loss: 0.3387 - val_loss: 0.5073
+Epoch 32/100
+93/93 - 41s - loss: 0.3347 - val_loss: 0.4902
+Epoch 33/100
+93/93 - 41s - loss: 0.3270 - val_loss: 0.5059
+Epoch 34/100
+93/93 - 41s - loss: 0.3207 - val_loss: 0.4832
+Epoch 35/100
+93/93 - 41s - loss: 0.3147 - val_loss: 0.5156
+Epoch 36/100
+93/93 - 41s - loss: 0.3113 - val_loss: 0.4812
+Epoch 37/100
+93/93 - 41s - loss: 0.3078 - val_loss: 0.5131
+Epoch 38/100
+93/93 - 39s - loss: 0.3121 - val_loss: 0.4937
+Epoch 39/100
+93/93 - 43s - loss: 0.3086 - val_loss: 0.4978
+Epoch 40/100
+93/93 - 45s - loss: 0.3167 - val_loss: 0.4998
+Epoch 41/100
+93/93 - 44s - loss: 0.3286 - val_loss: 0.5025
+Epoch 42/100
+93/93 - 45s - loss: 0.3230 - val_loss: 0.4920
+Epoch 43/100
+93/93 - 44s - loss: 0.3172 - val_loss: 0.4983
+Epoch 44/100
+93/93 - 45s - loss: 0.3064 - val_loss: 0.4943
+Epoch 45/100
+93/93 - 47s - loss: 0.3692 - val_loss: 0.5339
+Epoch 46/100
+93/93 - 47s - loss: 0.3622 - val_loss: 0.5069
+Epoch 47/100
+93/93 - 46s - loss: 0.3222 - val_loss: 0.4899
+Epoch 48/100
+93/93 - 47s - loss: 0.2967 - val_loss: 0.4906
+Epoch 49/100
+93/93 - 46s - loss: 0.2898 - val_loss: 0.4892
+Epoch 50/100
+93/93 - 47s - loss: 0.2904 - val_loss: 0.4938
+Epoch 51/100
+93/93 - 47s - loss: 0.2817 - val_loss: 0.4877
+Epoch 52/100
+93/93 - 42s - loss: 0.2824 - val_loss: 0.5076
+Epoch 53/100
+93/93 - 41s - loss: 0.2779 - val_loss: 0.4975
+Epoch 54/100
+93/93 - 41s - loss: 0.2752 - val_loss: 0.5022
+Epoch 55/100
+93/93 - 41s - loss: 0.2726 - val_loss: 0.4947
+Epoch 56/100
+93/93 - 42s - loss: 0.2745 - val_loss: 0.5078
+Epoch 57/100
+93/93 - 41s - loss: 0.2836 - val_loss: 0.4979
+Epoch 58/100
+93/93 - 42s - loss: 0.2796 - val_loss: 0.4879
+Epoch 59/100
+93/93 - 41s - loss: 0.2688 - val_loss: 0.4957
+Epoch 60/100
+93/93 - 42s - loss: 0.2667 - val_loss: 0.4990
+Epoch 61/100
+93/93 - 41s - loss: 0.2711 - val_loss: 0.4973
+
+##################################################
+#                     RESULT                     #
+##################################################
+
+RMS VALUES: RUN 1, TEST SET
+RMS Raw: 51.1449298402485
+RMS BCGNet: 51.6970761068605
+
+FREQUENCY BAND POWER REDUCTION: RUN 1
+Results for Delta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        3132.32          1.0076
+
+Results for Theta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        246.318        0.957485
+
+Results for Alpha band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        120.232        0.943168
+
+________________________________________
+
+Reading /disk1/guangyuan/BCGnet/data/changqing/changqing_r01_raw.fdt
+Reading /disk1/guangyuan/BCGnet/data/changqing/changqing_r01_raw.fdt
+Reading 0 ... 569999  =      0.000 ...  5699.990 secs...
+
+Rejecting 301 epochs out of a total of 1899
+1598 epochs remaining...
+
+Model: "functional_3"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+ecg_input (InputLayer)       [(None, None, 1)]         0         
+_________________________________________________________________
+bidirectional_4 (Bidirection (None, None, 32)          1824      
+_________________________________________________________________
+bidirectional_5 (Bidirection (None, None, 32)          4800      
+_________________________________________________________________
+dense_2 (Dense)              (None, None, 8)           264       
+_________________________________________________________________
+dropout_1 (Dropout)          (None, None, 8)           0         
+_________________________________________________________________
+bidirectional_6 (Bidirection (None, None, 32)          2496      
+_________________________________________________________________
+bidirectional_7 (Bidirection (None, None, 128)         37632     
+_________________________________________________________________
+dense_3 (Dense)              (None, None, 63)          8127      
+=================================================================
+Total params: 55,143
+Trainable params: 55,143
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+85/85 - 42s - loss: 0.0944 - val_loss: 0.1035
+Epoch 2/100
+85/85 - 39s - loss: 0.0796 - val_loss: 0.0973
+Epoch 3/100
+85/85 - 39s - loss: 0.0753 - val_loss: 0.0954
+Epoch 4/100
+85/85 - 38s - loss: 0.0729 - val_loss: 0.0945
+Epoch 5/100
+85/85 - 37s - loss: 0.0709 - val_loss: 0.0922
+Epoch 6/100
+85/85 - 38s - loss: 0.0697 - val_loss: 0.0914
+Epoch 7/100
+85/85 - 37s - loss: 0.0688 - val_loss: 0.0916
+Epoch 8/100
+85/85 - 38s - loss: 0.0682 - val_loss: 0.0906
+Epoch 9/100
+85/85 - 37s - loss: 0.0673 - val_loss: 0.0906
+Epoch 10/100
+85/85 - 37s - loss: 0.0670 - val_loss: 0.0895
+Epoch 11/100
+85/85 - 38s - loss: 0.0665 - val_loss: 0.0900
+Epoch 12/100
+85/85 - 37s - loss: 0.0658 - val_loss: 0.0895
+Epoch 13/100
+85/85 - 38s - loss: 0.0655 - val_loss: 0.0900
+Epoch 14/100
+85/85 - 38s - loss: 0.0651 - val_loss: 0.0893
+Epoch 15/100
+85/85 - 38s - loss: 0.0647 - val_loss: 0.0892
+Epoch 16/100
+85/85 - 38s - loss: 0.0643 - val_loss: 0.0886
+Epoch 17/100
+85/85 - 38s - loss: 0.0643 - val_loss: 0.0886
+Epoch 18/100
+85/85 - 38s - loss: 0.0636 - val_loss: 0.0892
+Epoch 19/100
+85/85 - 38s - loss: 0.0633 - val_loss: 0.0885
+Epoch 20/100
+85/85 - 38s - loss: 0.0630 - val_loss: 0.0889
+Epoch 21/100
+85/85 - 38s - loss: 0.0627 - val_loss: 0.0889
+Epoch 22/100
+85/85 - 38s - loss: 0.0628 - val_loss: 0.0885
+Epoch 23/100
+85/85 - 38s - loss: 0.0620 - val_loss: 0.0879
+Epoch 24/100
+85/85 - 38s - loss: 0.0620 - val_loss: 0.0885
+Epoch 25/100
+85/85 - 37s - loss: 0.0619 - val_loss: 0.0876
+Epoch 26/100
+85/85 - 38s - loss: 0.0616 - val_loss: 0.0875
+Epoch 27/100
+85/85 - 38s - loss: 0.0612 - val_loss: 0.0888
+Epoch 28/100
+85/85 - 38s - loss: 0.0612 - val_loss: 0.0881
+Epoch 29/100
+85/85 - 37s - loss: 0.0608 - val_loss: 0.0876
+Epoch 30/100
+85/85 - 38s - loss: 0.0608 - val_loss: 0.0880
+Epoch 31/100
+85/85 - 38s - loss: 0.0605 - val_loss: 0.0885
+Epoch 32/100
+85/85 - 38s - loss: 0.0602 - val_loss: 0.0876
+Epoch 33/100
+85/85 - 38s - loss: 0.0598 - val_loss: 0.0876
+Epoch 34/100
+85/85 - 37s - loss: 0.0597 - val_loss: 0.0882
+Epoch 35/100
+85/85 - 38s - loss: 0.0594 - val_loss: 0.0870
+Epoch 36/100
+85/85 - 38s - loss: 0.0593 - val_loss: 0.0878
+Epoch 37/100
+85/85 - 43s - loss: 0.0589 - val_loss: 0.0874
+Epoch 38/100
+85/85 - 44s - loss: 0.0588 - val_loss: 0.0871
+Epoch 39/100
+85/85 - 43s - loss: 0.0585 - val_loss: 0.0870
+Epoch 40/100
+85/85 - 44s - loss: 0.0581 - val_loss: 0.0884
+Epoch 41/100
+85/85 - 43s - loss: 0.0578 - val_loss: 0.0877
+Epoch 42/100
+85/85 - 39s - loss: 0.0574 - val_loss: 0.0888
+Epoch 43/100
+85/85 - 38s - loss: 0.0575 - val_loss: 0.0880
+Epoch 44/100
+85/85 - 42s - loss: 0.0575 - val_loss: 0.0883
+Epoch 45/100
+85/85 - 43s - loss: 0.0573 - val_loss: 0.0878
+Epoch 46/100
+85/85 - 43s - loss: 0.0565 - val_loss: 0.0883
+Epoch 47/100
+85/85 - 42s - loss: 0.0564 - val_loss: 0.0873
+Epoch 48/100
+85/85 - 39s - loss: 0.0563 - val_loss: 0.0869
+Epoch 49/100
+85/85 - 40s - loss: 0.0568 - val_loss: 0.0872
+Epoch 50/100
+85/85 - 39s - loss: 0.0559 - val_loss: 0.0882
+Epoch 51/100
+85/85 - 37s - loss: 0.0558 - val_loss: 0.0880
+Epoch 52/100
+85/85 - 36s - loss: 0.0552 - val_loss: 0.0882
+Epoch 53/100
+85/85 - 37s - loss: 0.0557 - val_loss: 0.0875
+Epoch 54/100
+85/85 - 37s - loss: 0.0551 - val_loss: 0.0869
+Epoch 55/100
+85/85 - 36s - loss: 0.0543 - val_loss: 0.0885
+Epoch 56/100
+85/85 - 38s - loss: 0.0543 - val_loss: 0.0883
+Epoch 57/100
+85/85 - 38s - loss: 0.0537 - val_loss: 0.0870
+Epoch 58/100
+85/85 - 38s - loss: 0.0542 - val_loss: 0.0881
+Epoch 59/100
+85/85 - 38s - loss: 0.0539 - val_loss: 0.0873
+Epoch 60/100
+85/85 - 38s - loss: 0.0536 - val_loss: 0.0869
+Epoch 61/100
+85/85 - 38s - loss: 0.0560 - val_loss: 0.0879
+Epoch 62/100
+85/85 - 38s - loss: 0.0533 - val_loss: 0.0889
+Epoch 63/100
+85/85 - 38s - loss: 0.0530 - val_loss: 0.0869
+Epoch 64/100
+85/85 - 37s - loss: 0.0518 - val_loss: 0.0883
+Epoch 65/100
+85/85 - 37s - loss: 0.0556 - val_loss: 0.0871
+Epoch 66/100
+85/85 - 38s - loss: 0.0533 - val_loss: 0.0873
+Epoch 67/100
+85/85 - 38s - loss: 0.0519 - val_loss: 0.0875
+Epoch 68/100
+85/85 - 37s - loss: 0.0520 - val_loss: 0.0870
+Epoch 69/100
+85/85 - 38s - loss: 0.0515 - val_loss: 0.0888
+Epoch 70/100
+85/85 - 38s - loss: 0.0515 - val_loss: 0.0895
+Epoch 71/100
+85/85 - 38s - loss: 0.0522 - val_loss: 0.0884
+Epoch 72/100
+85/85 - 36s - loss: 0.0565 - val_loss: 0.0912
+Epoch 73/100
+85/85 - 36s - loss: 0.0531 - val_loss: 0.0872
+
+##################################################
+#                     RESULT                     #
+##################################################
+
+RMS VALUES: RUN 1, TEST SET
+RMS Raw: 26.402685095031018
+RMS BCGNet: 23.063796290735784
+
+FREQUENCY BAND POWER REDUCTION: RUN 1
+Results for Delta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        700.827        0.841763
+
+Results for Theta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet         256.13        0.463639
+
+Results for Alpha band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        120.525        0.562173
+
+________________________________________
+
+Reading /disk1/guangyuan/BCGnet/data/cuiyanmei/cuiyanmei_r01_raw.fdt
+Reading /disk1/guangyuan/BCGnet/data/cuiyanmei/cuiyanmei_r01_raw.fdt
+Reading 0 ... 815999  =      0.000 ...  8159.990 secs...
+
+Rejecting 43 epochs out of a total of 2719
+2676 epochs remaining...
+
+Model: "functional_5"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+ecg_input (InputLayer)       [(None, None, 1)]         0         
+_________________________________________________________________
+bidirectional_8 (Bidirection (None, None, 32)          1824      
+_________________________________________________________________
+bidirectional_9 (Bidirection (None, None, 32)          4800      
+_________________________________________________________________
+dense_4 (Dense)              (None, None, 8)           264       
+_________________________________________________________________
+dropout_2 (Dropout)          (None, None, 8)           0         
+_________________________________________________________________
+bidirectional_10 (Bidirectio (None, None, 32)          2496      
+_________________________________________________________________
+bidirectional_11 (Bidirectio (None, None, 128)         37632     
+_________________________________________________________________
+dense_5 (Dense)              (None, None, 63)          8127      
+=================================================================
+Total params: 55,143
+Trainable params: 55,143
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+99/99 - 48s - loss: 0.6849 - val_loss: 0.6519
+Epoch 2/100
+99/99 - 44s - loss: 0.6015 - val_loss: 0.6373
+Epoch 3/100
+99/99 - 46s - loss: 0.5861 - val_loss: 0.6215
+Epoch 4/100
+99/99 - 45s - loss: 0.5743 - val_loss: 0.6157
+Epoch 5/100
+99/99 - 45s - loss: 0.5662 - val_loss: 0.6214
+Epoch 6/100
+99/99 - 44s - loss: 0.5613 - val_loss: 0.6148
+Epoch 7/100
+99/99 - 45s - loss: 0.5555 - val_loss: 0.6244
+Epoch 8/100
+99/99 - 44s - loss: 0.5479 - val_loss: 0.6171
+Epoch 9/100
+99/99 - 45s - loss: 0.5428 - val_loss: 0.6179
+Epoch 10/100
+99/99 - 45s - loss: 0.5375 - val_loss: 0.6183
+Epoch 11/100
+99/99 - 45s - loss: 0.5335 - val_loss: 0.6268
+Epoch 12/100
+99/99 - 45s - loss: 0.5280 - val_loss: 0.6214
+Epoch 13/100
+99/99 - 43s - loss: 0.5226 - val_loss: 0.6246
+Epoch 14/100
+99/99 - 45s - loss: 0.5208 - val_loss: 0.6178
+Epoch 15/100
+99/99 - 44s - loss: 0.5120 - val_loss: 0.6365
+Epoch 16/100
+99/99 - 43s - loss: 0.5098 - val_loss: 0.6352
+Epoch 17/100
+99/99 - 42s - loss: 0.4979 - val_loss: 0.6298
+Epoch 18/100
+99/99 - 42s - loss: 0.4945 - val_loss: 0.6606
+Epoch 19/100
+99/99 - 43s - loss: 0.4961 - val_loss: 0.6454
+Epoch 20/100
+99/99 - 41s - loss: 0.4867 - val_loss: 0.6357
+Epoch 21/100
+99/99 - 44s - loss: 0.4825 - val_loss: 0.6282
+Epoch 22/100
+99/99 - 44s - loss: 0.4738 - val_loss: 0.6447
+Epoch 23/100
+99/99 - 44s - loss: 0.4696 - val_loss: 0.6382
+Epoch 24/100
+99/99 - 44s - loss: 0.4609 - val_loss: 0.6343
+Epoch 25/100
+99/99 - 45s - loss: 0.4584 - val_loss: 0.6474
+Epoch 26/100
+99/99 - 44s - loss: 0.4601 - val_loss: 0.6352
+Epoch 27/100
+99/99 - 45s - loss: 0.4533 - val_loss: 0.6530
+Epoch 28/100
+99/99 - 41s - loss: 0.4429 - val_loss: 0.6356
+Epoch 29/100
+99/99 - 42s - loss: 0.4477 - val_loss: 0.6397
+Epoch 30/100
+99/99 - 40s - loss: 0.4378 - val_loss: 0.6367
+Epoch 31/100
+99/99 - 40s - loss: 0.4320 - val_loss: 0.6379
+
+##################################################
+#                     RESULT                     #
+##################################################
+
+RMS VALUES: RUN 1, TEST SET
+RMS Raw: 20.694360409360495
+RMS BCGNet: 16.570844730178646
+
+FREQUENCY BAND POWER REDUCTION: RUN 1
+Results for Delta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet         403.45         0.78555
+
+Results for Theta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        130.779        0.409533
+
+Results for Alpha band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        66.6108         0.33773
+
+________________________________________
+
+Reading /disk1/guangyuan/BCGnet/data/duliyan/duliyan_r01_raw.fdt
+Reading /disk1/guangyuan/BCGnet/data/duliyan/duliyan_r01_raw.fdt
+Reading 0 ... 584999  =      0.000 ...  5849.990 secs...
+
+Rejecting 141 epochs out of a total of 1949
+1808 epochs remaining...
+
+Model: "functional_7"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+ecg_input (InputLayer)       [(None, None, 1)]         0         
+_________________________________________________________________
+bidirectional_12 (Bidirectio (None, None, 32)          1824      
+_________________________________________________________________
+bidirectional_13 (Bidirectio (None, None, 32)          4800      
+_________________________________________________________________
+dense_6 (Dense)              (None, None, 8)           264       
+_________________________________________________________________
+dropout_3 (Dropout)          (None, None, 8)           0         
+_________________________________________________________________
+bidirectional_14 (Bidirectio (None, None, 32)          2496      
+_________________________________________________________________
+bidirectional_15 (Bidirectio (None, None, 128)         37632     
+_________________________________________________________________
+dense_7 (Dense)              (None, None, 63)          8127      
+=================================================================
+Total params: 55,143
+Trainable params: 55,143
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+92/92 - 46s - loss: 0.2962 - val_loss: 0.2663
+Epoch 2/100
+92/92 - 43s - loss: 0.2618 - val_loss: 0.2635
+Epoch 3/100
+92/92 - 43s - loss: 0.2558 - val_loss: 0.2504
+Epoch 4/100
+92/92 - 43s - loss: 0.2509 - val_loss: 0.2510
+Epoch 5/100
+92/92 - 43s - loss: 0.2489 - val_loss: 0.2476
+Epoch 6/100
+92/92 - 43s - loss: 0.2462 - val_loss: 0.2431
+Epoch 7/100
+92/92 - 43s - loss: 0.2439 - val_loss: 0.2440
+Epoch 8/100
+92/92 - 42s - loss: 0.2410 - val_loss: 0.2470
+Epoch 9/100
+92/92 - 38s - loss: 0.2404 - val_loss: 0.2428
+Epoch 10/100
+92/92 - 37s - loss: 0.2386 - val_loss: 0.2419
+Epoch 11/100
+92/92 - 39s - loss: 0.2343 - val_loss: 0.2498
+Epoch 12/100
+92/92 - 37s - loss: 0.2334 - val_loss: 0.2390
+Epoch 13/100
+92/92 - 38s - loss: 0.2335 - val_loss: 0.2464
+Epoch 14/100
+92/92 - 37s - loss: 0.2315 - val_loss: 0.2466
+Epoch 15/100
+92/92 - 38s - loss: 0.2285 - val_loss: 0.2493
+Epoch 16/100
+92/92 - 38s - loss: 0.2250 - val_loss: 0.2467
+Epoch 17/100
+92/92 - 38s - loss: 0.2249 - val_loss: 0.2469
+Epoch 18/100
+92/92 - 37s - loss: 0.2218 - val_loss: 0.2457
+Epoch 19/100
+92/92 - 37s - loss: 0.2185 - val_loss: 0.2499
+Epoch 20/100
+92/92 - 37s - loss: 0.2181 - val_loss: 0.2494
+Epoch 21/100
+92/92 - 37s - loss: 0.2188 - val_loss: 0.2430
+Epoch 22/100
+92/92 - 37s - loss: 0.2162 - val_loss: 0.2496
+Epoch 23/100
+92/92 - 37s - loss: 0.2123 - val_loss: 0.2498
+Epoch 24/100
+92/92 - 37s - loss: 0.2101 - val_loss: 0.2590
+Epoch 25/100
+92/92 - 37s - loss: 0.2118 - val_loss: 0.2589
+Epoch 26/100
+92/92 - 38s - loss: 0.2076 - val_loss: 0.2691
+Epoch 27/100
+92/92 - 38s - loss: 0.2053 - val_loss: 0.2549
+Epoch 28/100
+92/92 - 37s - loss: 0.2100 - val_loss: 0.2525
+Epoch 29/100
+92/92 - 39s - loss: 0.2010 - val_loss: 0.2563
+Epoch 30/100
+92/92 - 39s - loss: 0.1962 - val_loss: 0.2546
+Epoch 31/100
+92/92 - 38s - loss: 0.1943 - val_loss: 0.2703
+Epoch 32/100
+92/92 - 38s - loss: 0.1967 - val_loss: 0.2582
+Epoch 33/100
+92/92 - 39s - loss: 0.1920 - val_loss: 0.2538
+Epoch 34/100
+92/92 - 41s - loss: 0.1913 - val_loss: 0.2570
+Epoch 35/100
+92/92 - 39s - loss: 0.1891 - val_loss: 0.2619
+Epoch 36/100
+92/92 - 40s - loss: 0.1924 - val_loss: 0.2575
+Epoch 37/100
+92/92 - 41s - loss: 0.1932 - val_loss: 0.2487
+
+##################################################
+#                     RESULT                     #
+##################################################
+
+RMS VALUES: RUN 1, TEST SET
+RMS Raw: 29.16048712384201
+RMS BCGNet: 23.824168455670087
+
+FREQUENCY BAND POWER REDUCTION: RUN 1
+Results for Delta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        779.892        0.645767
+
+Results for Theta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        270.979        0.402577
+
+Results for Alpha band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        141.339        0.757678
+
+________________________________________
+
+Reading /disk1/guangyuan/BCGnet/data/fuzuoce/fuzuoce_r01_raw.fdt
+Reading /disk1/guangyuan/BCGnet/data/fuzuoce/fuzuoce_r01_raw.fdt
+Reading 0 ... 668999  =      0.000 ...  6689.990 secs...
+
+Rejecting 138 epochs out of a total of 2229
+2091 epochs remaining...
+
+Model: "functional_9"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+ecg_input (InputLayer)       [(None, None, 1)]         0         
+_________________________________________________________________
+bidirectional_16 (Bidirectio (None, None, 32)          1824      
+_________________________________________________________________
+bidirectional_17 (Bidirectio (None, None, 32)          4800      
+_________________________________________________________________
+dense_8 (Dense)              (None, None, 8)           264       
+_________________________________________________________________
+dropout_4 (Dropout)          (None, None, 8)           0         
+_________________________________________________________________
+bidirectional_18 (Bidirectio (None, None, 32)          2496      
+_________________________________________________________________
+bidirectional_19 (Bidirectio (None, None, 128)         37632     
+_________________________________________________________________
+dense_9 (Dense)              (None, None, 63)          8127      
+=================================================================
+Total params: 55,143
+Trainable params: 55,143
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+94/94 - 45s - loss: 0.5881 - val_loss: 0.5174
+Epoch 2/100
+94/94 - 41s - loss: 0.5417 - val_loss: 0.5059
+Epoch 3/100
+94/94 - 41s - loss: 0.5222 - val_loss: 0.5013
+Epoch 4/100
+94/94 - 42s - loss: 0.5109 - val_loss: 0.5189
+Epoch 5/100
+94/94 - 43s - loss: 0.5023 - val_loss: 0.5078
+Epoch 6/100
+94/94 - 41s - loss: 0.4950 - val_loss: 0.5024
+Epoch 7/100
+94/94 - 44s - loss: 0.4893 - val_loss: 0.4969
+Epoch 8/100
+94/94 - 43s - loss: 0.4859 - val_loss: 0.5028
+Epoch 9/100
+94/94 - 43s - loss: 0.4967 - val_loss: 0.5160
+Epoch 10/100
+94/94 - 43s - loss: 0.4827 - val_loss: 0.5070
+Epoch 11/100
+94/94 - 43s - loss: 0.4738 - val_loss: 0.5026
+Epoch 12/100
+94/94 - 43s - loss: 0.4654 - val_loss: 0.5244
+Epoch 13/100
+94/94 - 42s - loss: 0.4632 - val_loss: 0.5232
+Epoch 14/100
+94/94 - 42s - loss: 0.4651 - val_loss: 0.5248
+Epoch 15/100
+94/94 - 43s - loss: 0.4544 - val_loss: 0.5038
+Epoch 16/100
+94/94 - 43s - loss: 0.4489 - val_loss: 0.5128
+Epoch 17/100
+94/94 - 43s - loss: 0.4484 - val_loss: 0.4963
+Epoch 18/100
+94/94 - 43s - loss: 0.4399 - val_loss: 0.5089
+Epoch 19/100
+94/94 - 42s - loss: 0.4356 - val_loss: 0.5409
+Epoch 20/100
+94/94 - 44s - loss: 0.4756 - val_loss: 0.5153
+Epoch 21/100
+94/94 - 42s - loss: 0.4671 - val_loss: 0.5054
+Epoch 22/100
+94/94 - 43s - loss: 0.4989 - val_loss: 0.5300
+Epoch 23/100
+94/94 - 43s - loss: 0.4708 - val_loss: 0.5147
+Epoch 24/100
+94/94 - 43s - loss: 0.4522 - val_loss: 0.5212
+Epoch 25/100
+94/94 - 43s - loss: 0.4395 - val_loss: 0.5032
+Epoch 26/100
+94/94 - 43s - loss: 0.4289 - val_loss: 0.5203
+Epoch 27/100
+94/94 - 44s - loss: 0.4214 - val_loss: 0.5089
+Epoch 28/100
+94/94 - 43s - loss: 0.4141 - val_loss: 0.5200
+Epoch 29/100
+94/94 - 43s - loss: 0.4101 - val_loss: 0.5083
+Epoch 30/100
+94/94 - 43s - loss: 0.4151 - val_loss: 0.5135
+Epoch 31/100
+94/94 - 42s - loss: 0.4105 - val_loss: 0.5115
+Epoch 32/100
+94/94 - 43s - loss: 0.4021 - val_loss: 0.5172
+Epoch 33/100
+94/94 - 43s - loss: 0.3929 - val_loss: 0.5223
+Epoch 34/100
+94/94 - 41s - loss: 0.3963 - val_loss: 0.5161
+Epoch 35/100
+94/94 - 43s - loss: 0.3888 - val_loss: 0.5282
+Epoch 36/100
+94/94 - 41s - loss: 0.3815 - val_loss: 0.5141
+Epoch 37/100
+94/94 - 41s - loss: 0.3809 - val_loss: 0.5268
+Epoch 38/100
+94/94 - 43s - loss: 0.3769 - val_loss: 0.5358
+Epoch 39/100
+94/94 - 43s - loss: 0.3761 - val_loss: 0.5268
+Epoch 40/100
+94/94 - 43s - loss: 0.3928 - val_loss: 0.5305
+Epoch 41/100
+94/94 - 44s - loss: 0.3752 - val_loss: 0.5218
+Epoch 42/100
+94/94 - 42s - loss: 0.3639 - val_loss: 0.5153
+
+##################################################
+#                     RESULT                     #
+##################################################
+
+RMS VALUES: RUN 1, TEST SET
+RMS Raw: 47.98327876737929
+RMS BCGNet: 41.895123279614815
+
+FREQUENCY BAND POWER REDUCTION: RUN 1
+Results for Delta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        2591.99        0.748783
+
+Results for Theta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        487.333        0.407434
+
+Results for Alpha band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        249.214        0.546406
+
+________________________________________
+
+Reading /disk1/guangyuan/BCGnet/data/gaohuirong/gaohuirong_r01_raw.fdt
+Reading /disk1/guangyuan/BCGnet/data/gaohuirong/gaohuirong_r01_raw.fdt
+Reading 0 ... 251999  =      0.000 ...  2519.990 secs...
+
+Rejecting 36 epochs out of a total of 839
+803 epochs remaining...
+
+Model: "functional_11"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+ecg_input (InputLayer)       [(None, None, 1)]         0         
+_________________________________________________________________
+bidirectional_20 (Bidirectio (None, None, 32)          1824      
+_________________________________________________________________
+bidirectional_21 (Bidirectio (None, None, 32)          4800      
+_________________________________________________________________
+dense_10 (Dense)             (None, None, 8)           264       
+_________________________________________________________________
+dropout_5 (Dropout)          (None, None, 8)           0         
+_________________________________________________________________
+bidirectional_22 (Bidirectio (None, None, 32)          2496      
+_________________________________________________________________
+bidirectional_23 (Bidirectio (None, None, 128)         37632     
+_________________________________________________________________
+dense_11 (Dense)             (None, None, 63)          8127      
+=================================================================
+Total params: 55,143
+Trainable params: 55,143
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+96/96 - 47s - loss: 0.4895 - val_loss: 0.3775
+Epoch 2/100
+96/96 - 43s - loss: 0.4245 - val_loss: 0.3628
+Epoch 3/100
+96/96 - 45s - loss: 0.4132 - val_loss: 0.3640
+Epoch 4/100
+96/96 - 44s - loss: 0.4051 - val_loss: 0.3506
+Epoch 5/100
+96/96 - 43s - loss: 0.3989 - val_loss: 0.3487
+Epoch 6/100
+96/96 - 48s - loss: 0.3941 - val_loss: 0.3458
+Epoch 7/100
+96/96 - 50s - loss: 0.3892 - val_loss: 0.3512
+Epoch 8/100
+96/96 - 45s - loss: 0.3848 - val_loss: 0.3454
+Epoch 9/100
+96/96 - 46s - loss: 0.3786 - val_loss: 0.3487
+Epoch 10/100
+96/96 - 45s - loss: 0.3774 - val_loss: 0.3410
+Epoch 11/100
+96/96 - 44s - loss: 0.3736 - val_loss: 0.3434
+Epoch 12/100
+96/96 - 43s - loss: 0.3672 - val_loss: 0.3415
+Epoch 13/100
+96/96 - 43s - loss: 0.3645 - val_loss: 0.3541
+Epoch 14/100
+96/96 - 43s - loss: 0.3632 - val_loss: 0.3467
+Epoch 15/100
+96/96 - 43s - loss: 0.3579 - val_loss: 0.3421
+Epoch 16/100
+96/96 - 43s - loss: 0.3547 - val_loss: 0.3436
+Epoch 17/100
+96/96 - 43s - loss: 0.3533 - val_loss: 0.3429
+Epoch 18/100
+96/96 - 43s - loss: 0.3494 - val_loss: 0.3458
+Epoch 19/100
+96/96 - 42s - loss: 0.3503 - val_loss: 0.3368
+Epoch 20/100
+96/96 - 40s - loss: 0.3438 - val_loss: 0.3423
+Epoch 21/100
+96/96 - 40s - loss: 0.3390 - val_loss: 0.3498
+Epoch 22/100
+96/96 - 40s - loss: 0.3388 - val_loss: 0.3472
+Epoch 23/100
+96/96 - 43s - loss: 0.3368 - val_loss: 0.3511
+Epoch 24/100
+96/96 - 44s - loss: 0.3315 - val_loss: 0.3386
+Epoch 25/100
+96/96 - 44s - loss: 0.3272 - val_loss: 0.3549
+Epoch 26/100
+96/96 - 44s - loss: 0.3321 - val_loss: 0.3531
+Epoch 27/100
+96/96 - 44s - loss: 0.3267 - val_loss: 0.3459
+Epoch 28/100
+96/96 - 44s - loss: 0.3243 - val_loss: 0.3608
+Epoch 29/100
+96/96 - 44s - loss: 0.3305 - val_loss: 0.3400
+Epoch 30/100
+96/96 - 44s - loss: 0.3227 - val_loss: 0.3415
+Epoch 31/100
+96/96 - 44s - loss: 0.3136 - val_loss: 0.3507
+Epoch 32/100
+96/96 - 44s - loss: 0.3132 - val_loss: 0.3482
+Epoch 33/100
+96/96 - 44s - loss: 0.3205 - val_loss: 0.3574
+Epoch 34/100
+96/96 - 44s - loss: 0.3247 - val_loss: 0.3482
+Epoch 35/100
+96/96 - 43s - loss: 0.3108 - val_loss: 0.3483
+Epoch 36/100
+96/96 - 44s - loss: 0.3032 - val_loss: 0.3483
+Epoch 37/100
+96/96 - 44s - loss: 0.2994 - val_loss: 0.3532
+Epoch 38/100
+96/96 - 44s - loss: 0.2990 - val_loss: 0.3610
+Epoch 39/100
+96/96 - 44s - loss: 0.2977 - val_loss: 0.3540
+Epoch 40/100
+96/96 - 44s - loss: 0.2951 - val_loss: 0.3551
+Epoch 41/100
+96/96 - 44s - loss: 0.2900 - val_loss: 0.3526
+Epoch 42/100
+96/96 - 43s - loss: 0.2859 - val_loss: 0.3474
+Epoch 43/100
+96/96 - 42s - loss: 0.2838 - val_loss: 0.3530
+Epoch 44/100
+96/96 - 42s - loss: 0.2832 - val_loss: 0.3579
+
+##################################################
+#                     RESULT                     #
+##################################################
+
+RMS VALUES: RUN 1, TEST SET
+RMS Raw: 32.307733650219596
+RMS BCGNet: 29.97521517572595
+
+FREQUENCY BAND POWER REDUCTION: RUN 1
+Results for Delta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        857.247         0.87355
+
+Results for Theta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        153.694        0.602046
+
+Results for Alpha band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        138.765        0.463954
+
+________________________________________
+
+Reading /disk1/guangyuan/BCGnet/data/guofenglong/guofenglong_r01_raw.fdt
+Reading /disk1/guangyuan/BCGnet/data/guofenglong/guofenglong_r01_raw.fdt
+Reading 0 ... 815999  =      0.000 ...  8159.990 secs...
+
+Rejecting 37 epochs out of a total of 2719
+2682 epochs remaining...
+
+Model: "functional_13"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+ecg_input (InputLayer)       [(None, None, 1)]         0         
+_________________________________________________________________
+bidirectional_24 (Bidirectio (None, None, 32)          1824      
+_________________________________________________________________
+bidirectional_25 (Bidirectio (None, None, 32)          4800      
+_________________________________________________________________
+dense_12 (Dense)             (None, None, 8)           264       
+_________________________________________________________________
+dropout_6 (Dropout)          (None, None, 8)           0         
+_________________________________________________________________
+bidirectional_26 (Bidirectio (None, None, 32)          2496      
+_________________________________________________________________
+bidirectional_27 (Bidirectio (None, None, 128)         37632     
+_________________________________________________________________
+dense_13 (Dense)             (None, None, 63)          8127      
+=================================================================
+Total params: 55,143
+Trainable params: 55,143
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+99/99 - 45s - loss: 0.6507 - val_loss: 0.6740
+Epoch 2/100
+99/99 - 44s - loss: 0.5916 - val_loss: 0.6632
+Epoch 3/100
+99/99 - 44s - loss: 0.5739 - val_loss: 0.6566
+Epoch 4/100
+99/99 - 45s - loss: 0.5614 - val_loss: 0.6531
+Epoch 5/100
+99/99 - 44s - loss: 0.5533 - val_loss: 0.6521
+Epoch 6/100
+99/99 - 43s - loss: 0.5445 - val_loss: 0.6456
+Epoch 7/100
+99/99 - 43s - loss: 0.5368 - val_loss: 0.6678
+Epoch 8/100
+99/99 - 44s - loss: 0.5288 - val_loss: 0.6548
+Epoch 9/100
+99/99 - 41s - loss: 0.5223 - val_loss: 0.6453
+Epoch 10/100
+99/99 - 43s - loss: 0.5146 - val_loss: 0.6739
+Epoch 11/100
+99/99 - 41s - loss: 0.5022 - val_loss: 0.6579
+Epoch 12/100
+99/99 - 40s - loss: 0.4965 - val_loss: 0.6644
+Epoch 13/100
+99/99 - 41s - loss: 0.4906 - val_loss: 0.6734
+Epoch 14/100
+99/99 - 41s - loss: 0.4865 - val_loss: 0.6757
+Epoch 15/100
+99/99 - 41s - loss: 0.4817 - val_loss: 0.6629
+Epoch 16/100
+99/99 - 40s - loss: 0.4809 - val_loss: 0.6887
+Epoch 17/100
+99/99 - 40s - loss: 0.4849 - val_loss: 0.6655
+Epoch 18/100
+99/99 - 41s - loss: 0.4686 - val_loss: 0.6755
+Epoch 19/100
+99/99 - 40s - loss: 0.4684 - val_loss: 0.6633
+Epoch 20/100
+99/99 - 39s - loss: 0.4587 - val_loss: 0.6896
+Epoch 21/100
+99/99 - 40s - loss: 0.4453 - val_loss: 0.6992
+Epoch 22/100
+99/99 - 40s - loss: 0.4454 - val_loss: 0.6731
+Epoch 23/100
+99/99 - 40s - loss: 0.4345 - val_loss: 0.6580
+Epoch 24/100
+99/99 - 40s - loss: 0.4344 - val_loss: 0.6654
+Epoch 25/100
+99/99 - 40s - loss: 0.4376 - val_loss: 0.6895
+Epoch 26/100
+99/99 - 40s - loss: 0.4464 - val_loss: 0.6747
+Epoch 27/100
+99/99 - 42s - loss: 0.4250 - val_loss: 0.6815
+Epoch 28/100
+99/99 - 45s - loss: 0.4121 - val_loss: 0.6719
+Epoch 29/100
+99/99 - 45s - loss: 0.4090 - val_loss: 0.6781
+Epoch 30/100
+99/99 - 45s - loss: 0.4101 - val_loss: 0.6997
+Epoch 31/100
+99/99 - 45s - loss: 0.4054 - val_loss: 0.6779
+Epoch 32/100
+99/99 - 45s - loss: 0.4005 - val_loss: 0.6797
+Epoch 33/100
+99/99 - 44s - loss: 0.3958 - val_loss: 0.7082
+Epoch 34/100
+99/99 - 44s - loss: 0.4024 - val_loss: 0.6940
+
+##################################################
+#                     RESULT                     #
+##################################################
+
+RMS VALUES: RUN 1, TEST SET
+RMS Raw: 106.66820880685057
+RMS BCGNet: 105.1842243759885
+
+FREQUENCY BAND POWER REDUCTION: RUN 1
+Results for Delta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        13710.8         0.98091
+
+Results for Theta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        1234.28        0.776154
+
+Results for Alpha band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet         561.79         0.61212
+
+________________________________________
+
+Reading /disk1/guangyuan/BCGnet/data/haofangzhou/haofangzhou_r01_raw.fdt
+Reading /disk1/guangyuan/BCGnet/data/haofangzhou/haofangzhou_r01_raw.fdt
+Reading 0 ... 662999  =      0.000 ...  6629.990 secs...
+
+Rejecting 23 epochs out of a total of 2209
+2186 epochs remaining...
+
+Model: "functional_15"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+ecg_input (InputLayer)       [(None, None, 1)]         0         
+_________________________________________________________________
+bidirectional_28 (Bidirectio (None, None, 32)          1824      
+_________________________________________________________________
+bidirectional_29 (Bidirectio (None, None, 32)          4800      
+_________________________________________________________________
+dense_14 (Dense)             (None, None, 8)           264       
+_________________________________________________________________
+dropout_7 (Dropout)          (None, None, 8)           0         
+_________________________________________________________________
+bidirectional_30 (Bidirectio (None, None, 32)          2496      
+_________________________________________________________________
+bidirectional_31 (Bidirectio (None, None, 128)         37632     
+_________________________________________________________________
+dense_15 (Dense)             (None, None, 63)          8127      
+=================================================================
+Total params: 55,143
+Trainable params: 55,143
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+98/98 - 49s - loss: 0.4976 - val_loss: 0.4607
+Epoch 2/100
+98/98 - 46s - loss: 0.4195 - val_loss: 0.4474
+Epoch 3/100
+98/98 - 44s - loss: 0.4053 - val_loss: 0.4498
+Epoch 4/100
+98/98 - 44s - loss: 0.3954 - val_loss: 0.4358
+Epoch 5/100
+98/98 - 43s - loss: 0.3866 - val_loss: 0.4316
+Epoch 6/100
+98/98 - 44s - loss: 0.3826 - val_loss: 0.4306
+Epoch 7/100
+98/98 - 44s - loss: 0.3779 - val_loss: 0.4293
+Epoch 8/100
+98/98 - 42s - loss: 0.3712 - val_loss: 0.4325
+Epoch 9/100
+98/98 - 43s - loss: 0.3692 - val_loss: 0.4233
+Epoch 10/100
+98/98 - 40s - loss: 0.3648 - val_loss: 0.4174
+Epoch 11/100
+98/98 - 40s - loss: 0.3637 - val_loss: 0.4283
+Epoch 12/100
+98/98 - 41s - loss: 0.3574 - val_loss: 0.4389
+Epoch 13/100
+98/98 - 40s - loss: 0.3556 - val_loss: 0.4215
+Epoch 14/100
+98/98 - 40s - loss: 0.3547 - val_loss: 0.4456
+Epoch 15/100
+98/98 - 41s - loss: 0.3499 - val_loss: 0.4296
+Epoch 16/100
+98/98 - 41s - loss: 0.3492 - val_loss: 0.4349
+Epoch 17/100
+98/98 - 40s - loss: 0.3465 - val_loss: 0.4291
+Epoch 18/100
+98/98 - 40s - loss: 0.3459 - val_loss: 0.4370
+Epoch 19/100
+98/98 - 40s - loss: 0.3420 - val_loss: 0.4297
+Epoch 20/100
+98/98 - 41s - loss: 0.3396 - val_loss: 0.4395
+Epoch 21/100
+98/98 - 40s - loss: 0.3348 - val_loss: 0.4502
+Epoch 22/100
+98/98 - 40s - loss: 0.3341 - val_loss: 0.4524
+Epoch 23/100
+98/98 - 40s - loss: 0.3289 - val_loss: 0.4351
+Epoch 24/100
+98/98 - 40s - loss: 0.3244 - val_loss: 0.4359
+Epoch 25/100
+98/98 - 40s - loss: 0.3257 - val_loss: 0.4444
+Epoch 26/100
+98/98 - 40s - loss: 0.3193 - val_loss: 0.4416
+Epoch 27/100
+98/98 - 40s - loss: 0.3191 - val_loss: 0.4305
+Epoch 28/100
+98/98 - 40s - loss: 0.3183 - val_loss: 0.4481
+Epoch 29/100
+98/98 - 40s - loss: 0.3126 - val_loss: 0.4514
+Epoch 30/100
+98/98 - 40s - loss: 0.3123 - val_loss: 0.4313
+Epoch 31/100
+98/98 - 41s - loss: 0.3101 - val_loss: 0.4686
+Epoch 32/100
+98/98 - 41s - loss: 0.3062 - val_loss: 0.4576
+Epoch 33/100
+98/98 - 40s - loss: 0.3043 - val_loss: 0.4358
+Epoch 34/100
+98/98 - 41s - loss: 0.3044 - val_loss: 0.4338
+Epoch 35/100
+98/98 - 40s - loss: 0.2987 - val_loss: 0.4385
+
+##################################################
+#                     RESULT                     #
+##################################################
+
+RMS VALUES: RUN 1, TEST SET
+RMS Raw: 32.26461747197479
+RMS BCGNet: 19.14301460726421
+
+FREQUENCY BAND POWER REDUCTION: RUN 1
+Results for Delta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        488.993        0.479272
+
+Results for Theta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        230.898        0.181157
+
+Results for Alpha band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        140.911         0.26925
+
+________________________________________
+
+Reading /disk1/guangyuan/BCGnet/data/huangweiguo/huangweiguo_r01_raw.fdt
+Reading /disk1/guangyuan/BCGnet/data/huangweiguo/huangweiguo_r01_raw.fdt
+Reading 0 ... 527999  =      0.000 ...  5279.990 secs...
+
+Rejecting 12 epochs out of a total of 1759
+1747 epochs remaining...
+
+Model: "functional_17"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+ecg_input (InputLayer)       [(None, None, 1)]         0         
+_________________________________________________________________
+bidirectional_32 (Bidirectio (None, None, 32)          1824      
+_________________________________________________________________
+bidirectional_33 (Bidirectio (None, None, 32)          4800      
+_________________________________________________________________
+dense_16 (Dense)             (None, None, 8)           264       
+_________________________________________________________________
+dropout_8 (Dropout)          (None, None, 8)           0         
+_________________________________________________________________
+bidirectional_34 (Bidirectio (None, None, 32)          2496      
+_________________________________________________________________
+bidirectional_35 (Bidirectio (None, None, 128)         37632     
+_________________________________________________________________
+dense_17 (Dense)             (None, None, 63)          8127      
+=================================================================
+Total params: 55,143
+Trainable params: 55,143
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+100/100 - 45s - loss: 0.6834 - val_loss: 0.6655
+Epoch 2/100
+100/100 - 43s - loss: 0.5627 - val_loss: 0.5826
+Epoch 3/100
+100/100 - 42s - loss: 0.5212 - val_loss: 0.5897
+Epoch 4/100
+100/100 - 41s - loss: 0.5063 - val_loss: 0.5900
+Epoch 5/100
+100/100 - 41s - loss: 0.4934 - val_loss: 0.5567
+Epoch 6/100
+100/100 - 41s - loss: 0.4770 - val_loss: 0.5655
+Epoch 7/100
+100/100 - 41s - loss: 0.4655 - val_loss: 0.6066
+Epoch 8/100
+100/100 - 41s - loss: 0.4589 - val_loss: 0.5465
+Epoch 9/100
+100/100 - 42s - loss: 0.4529 - val_loss: 0.5695
+Epoch 10/100
+100/100 - 41s - loss: 0.4485 - val_loss: 0.5590
+Epoch 11/100
+100/100 - 41s - loss: 0.4385 - val_loss: 0.6079
+Epoch 12/100
+100/100 - 42s - loss: 0.4286 - val_loss: 0.6287
+Epoch 13/100
+100/100 - 41s - loss: 0.4254 - val_loss: 0.5926
+Epoch 14/100
+100/100 - 42s - loss: 0.4225 - val_loss: 0.5998
+Epoch 15/100
+100/100 - 41s - loss: 0.4197 - val_loss: 0.5579
+Epoch 16/100
+100/100 - 41s - loss: 0.4104 - val_loss: 0.5824
+Epoch 17/100
+100/100 - 41s - loss: 0.3989 - val_loss: 0.5957
+Epoch 18/100
+100/100 - 41s - loss: 0.3925 - val_loss: 0.5962
+Epoch 19/100
+100/100 - 40s - loss: 0.3856 - val_loss: 0.5880
+Epoch 20/100
+100/100 - 41s - loss: 0.3861 - val_loss: 0.5967
+Epoch 21/100
+100/100 - 41s - loss: 0.3832 - val_loss: 0.5647
+Epoch 22/100
+100/100 - 41s - loss: 0.3796 - val_loss: 0.5831
+Epoch 23/100
+100/100 - 44s - loss: 0.3736 - val_loss: 0.5945
+Epoch 24/100
+100/100 - 45s - loss: 0.3681 - val_loss: 0.5852
+Epoch 25/100
+100/100 - 42s - loss: 0.3685 - val_loss: 0.5900
+Epoch 26/100
+100/100 - 42s - loss: 0.3653 - val_loss: 0.5830
+Epoch 27/100
+100/100 - 41s - loss: 0.3616 - val_loss: 0.5828
+Epoch 28/100
+100/100 - 41s - loss: 0.3616 - val_loss: 0.5897
+Epoch 29/100
+100/100 - 41s - loss: 0.3642 - val_loss: 0.6016
+Epoch 30/100
+100/100 - 42s - loss: 0.3510 - val_loss: 0.5806
+Epoch 31/100
+100/100 - 41s - loss: 0.3507 - val_loss: 0.5796
+Epoch 32/100
+100/100 - 41s - loss: 0.3460 - val_loss: 0.5996
+Epoch 33/100
+100/100 - 41s - loss: 0.3466 - val_loss: 0.5886
+
+##################################################
+#                     RESULT                     #
+##################################################
+
+RMS VALUES: RUN 1, TEST SET
+RMS Raw: 50.1085584175769
+RMS BCGNet: 42.98930969629091
+
+FREQUENCY BAND POWER REDUCTION: RUN 1
+Results for Delta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        2316.71        0.751286
+
+Results for Theta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        239.731        0.605981
+
+Results for Alpha band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        148.588        0.468078
+
+________________________________________
+
+Reading /disk1/guangyuan/BCGnet/data/liweijie/liweijie_r01_raw.fdt
+Reading /disk1/guangyuan/BCGnet/data/liweijie/liweijie_r01_raw.fdt
+Reading 0 ... 716999  =      0.000 ...  7169.990 secs...
+
+Rejecting 157 epochs out of a total of 2389
+2232 epochs remaining...
+
+Model: "functional_19"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+ecg_input (InputLayer)       [(None, None, 1)]         0         
+_________________________________________________________________
+bidirectional_36 (Bidirectio (None, None, 32)          1824      
+_________________________________________________________________
+bidirectional_37 (Bidirectio (None, None, 32)          4800      
+_________________________________________________________________
+dense_18 (Dense)             (None, None, 8)           264       
+_________________________________________________________________
+dropout_9 (Dropout)          (None, None, 8)           0         
+_________________________________________________________________
+bidirectional_38 (Bidirectio (None, None, 32)          2496      
+_________________________________________________________________
+bidirectional_39 (Bidirectio (None, None, 128)         37632     
+_________________________________________________________________
+dense_19 (Dense)             (None, None, 63)          8127      
+=================================================================
+Total params: 55,143
+Trainable params: 55,143
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+94/94 - 41s - loss: 0.2006 - val_loss: 0.1800
+Epoch 2/100
+94/94 - 39s - loss: 0.1760 - val_loss: 0.1705
+Epoch 3/100
+94/94 - 42s - loss: 0.1695 - val_loss: 0.1698
+Epoch 4/100
+94/94 - 42s - loss: 0.1668 - val_loss: 0.1664
+Epoch 5/100
+94/94 - 42s - loss: 0.1651 - val_loss: 0.1616
+Epoch 6/100
+94/94 - 42s - loss: 0.1622 - val_loss: 0.1645
+Epoch 7/100
+94/94 - 42s - loss: 0.1604 - val_loss: 0.1636
+Epoch 8/100
+94/94 - 42s - loss: 0.1594 - val_loss: 0.1626
+Epoch 9/100
+94/94 - 40s - loss: 0.1578 - val_loss: 0.1633
+Epoch 10/100
+94/94 - 42s - loss: 0.1566 - val_loss: 0.1611
+Epoch 11/100
+94/94 - 42s - loss: 0.1556 - val_loss: 0.1632
+Epoch 12/100
+94/94 - 42s - loss: 0.1539 - val_loss: 0.1608
+Epoch 13/100
+94/94 - 42s - loss: 0.1537 - val_loss: 0.1588
+Epoch 14/100
+94/94 - 41s - loss: 0.1518 - val_loss: 0.1620
+Epoch 15/100
+94/94 - 42s - loss: 0.1515 - val_loss: 0.1621
+Epoch 16/100
+94/94 - 41s - loss: 0.1534 - val_loss: 0.1654
+Epoch 17/100
+94/94 - 41s - loss: 0.1525 - val_loss: 0.1604
+Epoch 18/100
+94/94 - 41s - loss: 0.1515 - val_loss: 0.1654
+Epoch 19/100
+94/94 - 40s - loss: 0.1481 - val_loss: 0.1667
+Epoch 20/100
+94/94 - 40s - loss: 0.1485 - val_loss: 0.1657
+Epoch 21/100
+94/94 - 42s - loss: 0.1467 - val_loss: 0.1612
+Epoch 22/100
+94/94 - 42s - loss: 0.1457 - val_loss: 0.1684
+Epoch 23/100
+94/94 - 41s - loss: 0.1466 - val_loss: 0.1654
+Epoch 24/100
+94/94 - 42s - loss: 0.1451 - val_loss: 0.1650
+Epoch 25/100
+94/94 - 41s - loss: 0.1451 - val_loss: 0.1634
+Epoch 26/100
+94/94 - 40s - loss: 0.1443 - val_loss: 0.1660
+Epoch 27/100
+94/94 - 42s - loss: 0.1414 - val_loss: 0.1621
+Epoch 28/100
+94/94 - 42s - loss: 0.1397 - val_loss: 0.1675
+Epoch 29/100
+94/94 - 42s - loss: 0.1403 - val_loss: 0.1705
+Epoch 30/100
+94/94 - 42s - loss: 0.1380 - val_loss: 0.1639
+Epoch 31/100
+94/94 - 40s - loss: 0.1380 - val_loss: 0.1652
+Epoch 32/100
+94/94 - 40s - loss: 0.1346 - val_loss: 0.1673
+Epoch 33/100
+94/94 - 39s - loss: 0.1358 - val_loss: 0.1687
+Epoch 34/100
+94/94 - 40s - loss: 0.1360 - val_loss: 0.1685
+Epoch 35/100
+94/94 - 39s - loss: 0.1334 - val_loss: 0.1674
+Epoch 36/100
+94/94 - 40s - loss: 0.1339 - val_loss: 0.1629
+Epoch 37/100
+94/94 - 42s - loss: 0.1380 - val_loss: 0.1649
+Epoch 38/100
+94/94 - 39s - loss: 0.1298 - val_loss: 0.1645
+
+##################################################
+#                     RESULT                     #
+##################################################
+
+RMS VALUES: RUN 1, TEST SET
+RMS Raw: 24.74982955172966
+RMS BCGNet: 19.817754438778678
+
+FREQUENCY BAND POWER REDUCTION: RUN 1
+Results for Delta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        594.154        0.781454
+
+Results for Theta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        148.176        0.384003
+
+Results for Alpha band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        92.9373        0.350599
+
+________________________________________
+
+Reading /disk1/guangyuan/BCGnet/data/liwenjun/liwenjun_r01_raw.fdt
+Reading /disk1/guangyuan/BCGnet/data/liwenjun/liwenjun_r01_raw.fdt
+Reading 0 ... 815999  =      0.000 ...  8159.990 secs...
+
+Rejecting 66 epochs out of a total of 2719
+2653 epochs remaining...
+
+Model: "functional_21"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+ecg_input (InputLayer)       [(None, None, 1)]         0         
+_________________________________________________________________
+bidirectional_40 (Bidirectio (None, None, 32)          1824      
+_________________________________________________________________
+bidirectional_41 (Bidirectio (None, None, 32)          4800      
+_________________________________________________________________
+dense_20 (Dense)             (None, None, 8)           264       
+_________________________________________________________________
+dropout_10 (Dropout)         (None, None, 8)           0         
+_________________________________________________________________
+bidirectional_42 (Bidirectio (None, None, 32)          2496      
+_________________________________________________________________
+bidirectional_43 (Bidirectio (None, None, 128)         37632     
+_________________________________________________________________
+dense_21 (Dense)             (None, None, 63)          8127      
+=================================================================
+Total params: 55,143
+Trainable params: 55,143
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+98/98 - 50s - loss: 0.6304 - val_loss: 0.6302
+Epoch 2/100
+98/98 - 46s - loss: 0.5254 - val_loss: 0.6042
+Epoch 3/100
+98/98 - 46s - loss: 0.5057 - val_loss: 0.5824
+Epoch 4/100
+98/98 - 45s - loss: 0.4918 - val_loss: 0.5643
+Epoch 5/100
+98/98 - 45s - loss: 0.4843 - val_loss: 0.5862
+Epoch 6/100
+98/98 - 45s - loss: 0.4746 - val_loss: 0.5679
+Epoch 7/100
+98/98 - 45s - loss: 0.4663 - val_loss: 0.5726
+Epoch 8/100
+98/98 - 45s - loss: 0.4594 - val_loss: 0.5742
+Epoch 9/100
+98/98 - 45s - loss: 0.4520 - val_loss: 0.5575
+Epoch 10/100
+98/98 - 49s - loss: 0.4474 - val_loss: 0.5620
+Epoch 11/100
+98/98 - 46s - loss: 0.4420 - val_loss: 0.5579
+Epoch 12/100
+98/98 - 43s - loss: 0.4399 - val_loss: 0.5664
+Epoch 13/100
+98/98 - 41s - loss: 0.4335 - val_loss: 0.5707
+Epoch 14/100
+98/98 - 41s - loss: 0.4242 - val_loss: 0.5555
+Epoch 15/100
+98/98 - 42s - loss: 0.4308 - val_loss: 0.5804
+Epoch 16/100
+98/98 - 41s - loss: 0.4192 - val_loss: 0.5556
+Epoch 17/100
+98/98 - 42s - loss: 0.4143 - val_loss: 0.5683
+Epoch 18/100
+98/98 - 41s - loss: 0.4113 - val_loss: 0.5462
+Epoch 19/100
+98/98 - 42s - loss: 0.4058 - val_loss: 0.5877
+Epoch 20/100
+98/98 - 41s - loss: 0.3990 - val_loss: 0.5688
+Epoch 21/100
+98/98 - 42s - loss: 0.4021 - val_loss: 0.5594
+Epoch 22/100
+98/98 - 41s - loss: 0.3988 - val_loss: 0.5674
+Epoch 23/100
+98/98 - 41s - loss: 0.3889 - val_loss: 0.5748
+Epoch 24/100
+98/98 - 41s - loss: 0.3893 - val_loss: 0.5922
+Epoch 25/100
+98/98 - 42s - loss: 0.3879 - val_loss: 0.5734
+Epoch 26/100
+98/98 - 41s - loss: 0.3990 - val_loss: 0.5670
+Epoch 27/100
+98/98 - 41s - loss: 0.3819 - val_loss: 0.5695
+Epoch 28/100
+98/98 - 40s - loss: 0.3738 - val_loss: 0.5929
+Epoch 29/100
+98/98 - 40s - loss: 0.3722 - val_loss: 0.5720
+Epoch 30/100
+98/98 - 43s - loss: 0.3707 - val_loss: 0.5871
+Epoch 31/100
+98/98 - 40s - loss: 0.3654 - val_loss: 0.5805
+Epoch 32/100
+98/98 - 40s - loss: 0.3743 - val_loss: 0.5881
+Epoch 33/100
+98/98 - 41s - loss: 0.3627 - val_loss: 0.5817
+Epoch 34/100
+98/98 - 44s - loss: 0.3571 - val_loss: 0.6000
+Epoch 35/100
+98/98 - 44s - loss: 0.3511 - val_loss: 0.5826
+Epoch 36/100
+98/98 - 44s - loss: 0.3615 - val_loss: 0.5845
+Epoch 37/100
+98/98 - 44s - loss: 0.3550 - val_loss: 0.5791
+Epoch 38/100
+98/98 - 45s - loss: 0.3470 - val_loss: 0.5927
+Epoch 39/100
+98/98 - 46s - loss: 0.3464 - val_loss: 0.5715
+Epoch 40/100
+98/98 - 45s - loss: 0.3455 - val_loss: 0.6078
+Epoch 41/100
+98/98 - 45s - loss: 0.3429 - val_loss: 0.5830
+Epoch 42/100
+98/98 - 45s - loss: 0.3425 - val_loss: 0.5922
+Epoch 43/100
+98/98 - 45s - loss: 0.3342 - val_loss: 0.5964
+
+##################################################
+#                     RESULT                     #
+##################################################
+
+RMS VALUES: RUN 1, TEST SET
+RMS Raw: 29.094214044071535
+RMS BCGNet: 22.301612262141997
+
+FREQUENCY BAND POWER REDUCTION: RUN 1
+Results for Delta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        718.893        0.581794
+
+Results for Theta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        276.563        0.476701
+
+Results for Alpha band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        195.883        0.587558
+
+________________________________________
+
+Reading /disk1/guangyuan/BCGnet/data/mayanwei/mayanwei_r01_raw.fdt
+Reading /disk1/guangyuan/BCGnet/data/mayanwei/mayanwei_r01_raw.fdt
+Reading 0 ... 815999  =      0.000 ...  8159.990 secs...
+
+Rejecting 68 epochs out of a total of 2719
+2651 epochs remaining...
+
+Model: "functional_23"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+ecg_input (InputLayer)       [(None, None, 1)]         0         
+_________________________________________________________________
+bidirectional_44 (Bidirectio (None, None, 32)          1824      
+_________________________________________________________________
+bidirectional_45 (Bidirectio (None, None, 32)          4800      
+_________________________________________________________________
+dense_22 (Dense)             (None, None, 8)           264       
+_________________________________________________________________
+dropout_11 (Dropout)         (None, None, 8)           0         
+_________________________________________________________________
+bidirectional_46 (Bidirectio (None, None, 32)          2496      
+_________________________________________________________________
+bidirectional_47 (Bidirectio (None, None, 128)         37632     
+_________________________________________________________________
+dense_23 (Dense)             (None, None, 63)          8127      
+=================================================================
+Total params: 55,143
+Trainable params: 55,143
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+98/98 - 44s - loss: 0.1835 - val_loss: 0.2080
+Epoch 2/100
+98/98 - 41s - loss: 0.1529 - val_loss: 0.1970
+Epoch 3/100
+98/98 - 44s - loss: 0.1478 - val_loss: 0.1946
+Epoch 4/100
+98/98 - 43s - loss: 0.1439 - val_loss: 0.1941
+Epoch 5/100
+98/98 - 42s - loss: 0.1412 - val_loss: 0.1908
+Epoch 6/100
+98/98 - 42s - loss: 0.1393 - val_loss: 0.1904
+Epoch 7/100
+98/98 - 41s - loss: 0.1382 - val_loss: 0.1890
+Epoch 8/100
+98/98 - 43s - loss: 0.1370 - val_loss: 0.1880
+Epoch 9/100
+98/98 - 43s - loss: 0.1358 - val_loss: 0.1909
+Epoch 10/100
+98/98 - 41s - loss: 0.1343 - val_loss: 0.1886
+Epoch 11/100
+98/98 - 41s - loss: 0.1336 - val_loss: 0.1889
+Epoch 12/100
+98/98 - 43s - loss: 0.1328 - val_loss: 0.1888
+Epoch 13/100
+98/98 - 41s - loss: 0.1321 - val_loss: 0.1891
+Epoch 14/100
+98/98 - 43s - loss: 0.1308 - val_loss: 0.1895
+Epoch 15/100
+98/98 - 42s - loss: 0.1299 - val_loss: 0.1884
+Epoch 16/100
+98/98 - 41s - loss: 0.1293 - val_loss: 0.1881
+Epoch 17/100
+98/98 - 43s - loss: 0.1285 - val_loss: 0.1892
+Epoch 18/100
+98/98 - 42s - loss: 0.1277 - val_loss: 0.1930
+Epoch 19/100
+98/98 - 41s - loss: 0.1272 - val_loss: 0.1900
+Epoch 20/100
+98/98 - 43s - loss: 0.1255 - val_loss: 0.1947
+Epoch 21/100
+98/98 - 43s - loss: 0.1236 - val_loss: 0.1943
+Epoch 22/100
+98/98 - 43s - loss: 0.1229 - val_loss: 0.1959
+Epoch 23/100
+98/98 - 44s - loss: 0.1219 - val_loss: 0.1969
+Epoch 24/100
+98/98 - 43s - loss: 0.1218 - val_loss: 0.1939
+Epoch 25/100
+98/98 - 41s - loss: 0.1204 - val_loss: 0.2039
+Epoch 26/100
+98/98 - 44s - loss: 0.1189 - val_loss: 0.2105
+Epoch 27/100
+98/98 - 42s - loss: 0.1170 - val_loss: 0.2023
+Epoch 28/100
+98/98 - 44s - loss: 0.1164 - val_loss: 0.2016
+Epoch 29/100
+98/98 - 44s - loss: 0.1169 - val_loss: 0.1985
+Epoch 30/100
+98/98 - 43s - loss: 0.1149 - val_loss: 0.1992
+Epoch 31/100
+98/98 - 43s - loss: 0.1121 - val_loss: 0.2088
+Epoch 32/100
+98/98 - 43s - loss: 0.1124 - val_loss: 0.2020
+Epoch 33/100
+98/98 - 42s - loss: 0.1095 - val_loss: 0.2001
+
+##################################################
+#                     RESULT                     #
+##################################################
+
+RMS VALUES: RUN 1, TEST SET
+RMS Raw: 26.951959982193152
+RMS BCGNet: 22.162358057821457
+
+FREQUENCY BAND POWER REDUCTION: RUN 1
+Results for Delta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        799.504        0.807246
+
+Results for Theta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        174.991         0.34888
+
+Results for Alpha band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        90.7267        0.359606
+
+________________________________________
+
+Reading /disk1/guangyuan/BCGnet/data/pengjian/pengjian_r01_raw.fdt
+Reading /disk1/guangyuan/BCGnet/data/pengjian/pengjian_r01_raw.fdt
+Reading 0 ... 815999  =      0.000 ...  8159.990 secs...
+
+Rejecting 87 epochs out of a total of 2719
+2632 epochs remaining...
+
+Model: "functional_25"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+ecg_input (InputLayer)       [(None, None, 1)]         0         
+_________________________________________________________________
+bidirectional_48 (Bidirectio (None, None, 32)          1824      
+_________________________________________________________________
+bidirectional_49 (Bidirectio (None, None, 32)          4800      
+_________________________________________________________________
+dense_24 (Dense)             (None, None, 8)           264       
+_________________________________________________________________
+dropout_12 (Dropout)         (None, None, 8)           0         
+_________________________________________________________________
+bidirectional_50 (Bidirectio (None, None, 32)          2496      
+_________________________________________________________________
+bidirectional_51 (Bidirectio (None, None, 128)         37632     
+_________________________________________________________________
+dense_25 (Dense)             (None, None, 63)          8127      
+=================================================================
+Total params: 55,143
+Trainable params: 55,143
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+97/97 - 44s - loss: 0.6204 - val_loss: 0.6732
+Epoch 2/100
+97/97 - 42s - loss: 0.5352 - val_loss: 0.6568
+Epoch 3/100
+97/97 - 43s - loss: 0.5132 - val_loss: 0.6526
+Epoch 4/100
+97/97 - 44s - loss: 0.4961 - val_loss: 0.6635
+Epoch 5/100
+97/97 - 44s - loss: 0.4856 - val_loss: 0.6564
+Epoch 6/100
+97/97 - 44s - loss: 0.4689 - val_loss: 0.6424
+Epoch 7/100
+97/97 - 43s - loss: 0.4631 - val_loss: 0.6363
+Epoch 8/100
+97/97 - 44s - loss: 0.4495 - val_loss: 0.6540
+Epoch 9/100
+97/97 - 44s - loss: 0.4464 - val_loss: 0.6466
+Epoch 10/100
+97/97 - 44s - loss: 0.4341 - val_loss: 0.6873
+Epoch 11/100
+97/97 - 44s - loss: 0.4302 - val_loss: 0.6731
+Epoch 12/100
+97/97 - 44s - loss: 0.4283 - val_loss: 0.6688
+Epoch 13/100
+97/97 - 44s - loss: 0.4149 - val_loss: 0.6840
+Epoch 14/100
+97/97 - 43s - loss: 0.4133 - val_loss: 0.6530
+Epoch 15/100
+97/97 - 42s - loss: 0.4226 - val_loss: 0.6592
+Epoch 16/100
+97/97 - 42s - loss: 0.4042 - val_loss: 0.6360
+Epoch 17/100
+97/97 - 43s - loss: 0.3928 - val_loss: 0.6438
+Epoch 18/100
+97/97 - 41s - loss: 0.3879 - val_loss: 0.6357
+Epoch 19/100
+97/97 - 43s - loss: 0.3817 - val_loss: 0.6463
+Epoch 20/100
+97/97 - 44s - loss: 0.3786 - val_loss: 0.6533
+Epoch 21/100
+97/97 - 44s - loss: 0.3761 - val_loss: 0.6410
+Epoch 22/100
+97/97 - 43s - loss: 0.3697 - val_loss: 0.6510
+Epoch 23/100
+97/97 - 43s - loss: 0.3895 - val_loss: 0.6664
+Epoch 24/100
+97/97 - 43s - loss: 0.3661 - val_loss: 0.6438
+Epoch 25/100
+97/97 - 41s - loss: 0.3557 - val_loss: 0.6472
+Epoch 26/100
+97/97 - 44s - loss: 0.3520 - val_loss: 0.6480
+Epoch 27/100
+97/97 - 42s - loss: 0.3536 - val_loss: 0.6466
+Epoch 28/100
+97/97 - 43s - loss: 0.3914 - val_loss: 0.6761
+Epoch 29/100
+97/97 - 43s - loss: 0.3651 - val_loss: 0.6893
+Epoch 30/100
+97/97 - 42s - loss: 0.3487 - val_loss: 0.6623
+Epoch 31/100
+97/97 - 43s - loss: 0.3500 - val_loss: 0.6555
+Epoch 32/100
+97/97 - 43s - loss: 0.3430 - val_loss: 0.6572
+Epoch 33/100
+97/97 - 43s - loss: 0.3396 - val_loss: 0.6536
+Epoch 34/100
+97/97 - 43s - loss: 0.3352 - val_loss: 0.6424
+Epoch 35/100
+97/97 - 43s - loss: 0.3266 - val_loss: 0.6554
+Epoch 36/100
+97/97 - 43s - loss: 0.3220 - val_loss: 0.6573
+Epoch 37/100
+97/97 - 43s - loss: 0.3189 - val_loss: 0.6646
+Epoch 38/100
+97/97 - 43s - loss: 0.3223 - val_loss: 0.6668
+Epoch 39/100
+97/97 - 43s - loss: 0.3177 - val_loss: 0.6618
+Epoch 40/100
+97/97 - 43s - loss: 0.3194 - val_loss: 0.6637
+Epoch 41/100
+97/97 - 43s - loss: 0.3221 - val_loss: 0.6687
+Epoch 42/100
+97/97 - 42s - loss: 0.3162 - val_loss: 0.6554
+Epoch 43/100
+97/97 - 42s - loss: 0.3125 - val_loss: 0.6653
+
+##################################################
+#                     RESULT                     #
+##################################################
+
+RMS VALUES: RUN 1, TEST SET
+RMS Raw: 30.987508330119194
+RMS BCGNet: 24.34349066507795
+
+FREQUENCY BAND POWER REDUCTION: RUN 1
+Results for Delta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        883.611        0.722451
+
+Results for Theta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        188.023        0.333492
+
+Results for Alpha band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        65.3337        0.437364
+
+________________________________________
+
+Reading /disk1/guangyuan/BCGnet/data/suhairong/suhairong_r01_raw.fdt
+Reading /disk1/guangyuan/BCGnet/data/suhairong/suhairong_r01_raw.fdt
+Reading 0 ... 815999  =      0.000 ...  8159.990 secs...
+
+Rejecting 25 epochs out of a total of 2719
+2694 epochs remaining...
+
+Model: "functional_27"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+ecg_input (InputLayer)       [(None, None, 1)]         0         
+_________________________________________________________________
+bidirectional_52 (Bidirectio (None, None, 32)          1824      
+_________________________________________________________________
+bidirectional_53 (Bidirectio (None, None, 32)          4800      
+_________________________________________________________________
+dense_26 (Dense)             (None, None, 8)           264       
+_________________________________________________________________
+dropout_13 (Dropout)         (None, None, 8)           0         
+_________________________________________________________________
+bidirectional_54 (Bidirectio (None, None, 32)          2496      
+_________________________________________________________________
+bidirectional_55 (Bidirectio (None, None, 128)         37632     
+_________________________________________________________________
+dense_27 (Dense)             (None, None, 63)          8127      
+=================================================================
+Total params: 55,143
+Trainable params: 55,143
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+100/100 - 46s - loss: 0.6688 - val_loss: 0.6847
+Epoch 2/100
+100/100 - 45s - loss: 0.6098 - val_loss: 0.6642
+Epoch 3/100
+100/100 - 45s - loss: 0.5889 - val_loss: 0.6665
+Epoch 4/100
+100/100 - 45s - loss: 0.5793 - val_loss: 0.6681
+Epoch 5/100
+100/100 - 44s - loss: 0.5665 - val_loss: 0.6608
+Epoch 6/100
+100/100 - 45s - loss: 0.5583 - val_loss: 0.6684
+Epoch 7/100
+100/100 - 45s - loss: 0.5508 - val_loss: 0.6598
+Epoch 8/100
+100/100 - 45s - loss: 0.5389 - val_loss: 0.6684
+Epoch 9/100
+100/100 - 45s - loss: 0.5388 - val_loss: 0.6589
+Epoch 10/100
+100/100 - 45s - loss: 0.5296 - val_loss: 0.6653
+Epoch 11/100
+100/100 - 43s - loss: 0.5212 - val_loss: 0.6772
+Epoch 12/100
+100/100 - 42s - loss: 0.5163 - val_loss: 0.6812
+Epoch 13/100
+100/100 - 42s - loss: 0.5093 - val_loss: 0.6882
+Epoch 14/100
+100/100 - 44s - loss: 0.5063 - val_loss: 0.6940
+Epoch 15/100
+100/100 - 44s - loss: 0.4976 - val_loss: 0.6668
+Epoch 16/100
+100/100 - 44s - loss: 0.4945 - val_loss: 0.6885
+Epoch 17/100
+100/100 - 44s - loss: 0.4878 - val_loss: 0.6842
+Epoch 18/100
+100/100 - 43s - loss: 0.4812 - val_loss: 0.6932
+Epoch 19/100
+100/100 - 44s - loss: 0.4706 - val_loss: 0.6910
+Epoch 20/100
+100/100 - 44s - loss: 0.4719 - val_loss: 0.7050
+Epoch 21/100
+100/100 - 44s - loss: 0.4683 - val_loss: 0.6930
+Epoch 22/100
+100/100 - 44s - loss: 0.4604 - val_loss: 0.6853
+Epoch 23/100
+100/100 - 44s - loss: 0.4564 - val_loss: 0.7105
+Epoch 24/100
+100/100 - 44s - loss: 0.4532 - val_loss: 0.7087
+Epoch 25/100
+100/100 - 44s - loss: 0.4485 - val_loss: 0.7122
+Epoch 26/100
+100/100 - 44s - loss: 0.4517 - val_loss: 0.7124
+Epoch 27/100
+100/100 - 44s - loss: 0.4444 - val_loss: 0.7008
+Epoch 28/100
+100/100 - 45s - loss: 0.4349 - val_loss: 0.7266
+Epoch 29/100
+100/100 - 47s - loss: 0.4484 - val_loss: 0.7050
+Epoch 30/100
+100/100 - 46s - loss: 0.4427 - val_loss: 0.6924
+Epoch 31/100
+100/100 - 47s - loss: 0.4272 - val_loss: 0.7126
+Epoch 32/100
+100/100 - 48s - loss: 0.4260 - val_loss: 0.7056
+Epoch 33/100
+100/100 - 51s - loss: 0.4191 - val_loss: 0.7162
+Epoch 34/100
+100/100 - 51s - loss: 0.4147 - val_loss: 0.7252
+
+##################################################
+#                     RESULT                     #
+##################################################
+
+RMS VALUES: RUN 1, TEST SET
+RMS Raw: 35.111126772258814
+RMS BCGNet: 26.8578162256806
+
+FREQUENCY BAND POWER REDUCTION: RUN 1
+Results for Delta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        1247.52         0.63869
+
+Results for Theta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        306.133         0.44171
+
+Results for Alpha band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet         138.62        0.329358
+
+________________________________________
+
+Reading /disk1/guangyuan/BCGnet/data/suncuiping2/suncuiping2_r01_raw.fdt
+Reading /disk1/guangyuan/BCGnet/data/suncuiping2/suncuiping2_r01_raw.fdt
+Reading 0 ... 590999  =      0.000 ...  5909.990 secs...
+
+Rejecting 190 epochs out of a total of 1969
+1779 epochs remaining...
+
+Model: "functional_29"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+ecg_input (InputLayer)       [(None, None, 1)]         0         
+_________________________________________________________________
+bidirectional_56 (Bidirectio (None, None, 32)          1824      
+_________________________________________________________________
+bidirectional_57 (Bidirectio (None, None, 32)          4800      
+_________________________________________________________________
+dense_28 (Dense)             (None, None, 8)           264       
+_________________________________________________________________
+dropout_14 (Dropout)         (None, None, 8)           0         
+_________________________________________________________________
+bidirectional_58 (Bidirectio (None, None, 32)          2496      
+_________________________________________________________________
+bidirectional_59 (Bidirectio (None, None, 128)         37632     
+_________________________________________________________________
+dense_29 (Dense)             (None, None, 63)          8127      
+=================================================================
+Total params: 55,143
+Trainable params: 55,143
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+91/91 - 45s - loss: 0.1577 - val_loss: 0.1358
+Epoch 2/100
+91/91 - 42s - loss: 0.1296 - val_loss: 0.1301
+Epoch 3/100
+91/91 - 40s - loss: 0.1260 - val_loss: 0.1289
+Epoch 4/100
+91/91 - 39s - loss: 0.1234 - val_loss: 0.1278
+Epoch 5/100
+91/91 - 40s - loss: 0.1220 - val_loss: 0.1262
+Epoch 6/100
+91/91 - 40s - loss: 0.1209 - val_loss: 0.1264
+Epoch 7/100
+91/91 - 39s - loss: 0.1192 - val_loss: 0.1265
+Epoch 8/100
+91/91 - 37s - loss: 0.1190 - val_loss: 0.1255
+Epoch 9/100
+91/91 - 39s - loss: 0.1176 - val_loss: 0.1253
+Epoch 10/100
+91/91 - 40s - loss: 0.1168 - val_loss: 0.1254
+Epoch 11/100
+91/91 - 40s - loss: 0.1166 - val_loss: 0.1263
+Epoch 12/100
+91/91 - 41s - loss: 0.1159 - val_loss: 0.1255
+Epoch 13/100
+91/91 - 40s - loss: 0.1151 - val_loss: 0.1254
+Epoch 14/100
+91/91 - 39s - loss: 0.1141 - val_loss: 0.1253
+Epoch 15/100
+91/91 - 40s - loss: 0.1135 - val_loss: 0.1249
+Epoch 16/100
+91/91 - 41s - loss: 0.1128 - val_loss: 0.1275
+Epoch 17/100
+91/91 - 41s - loss: 0.1120 - val_loss: 0.1259
+Epoch 18/100
+91/91 - 40s - loss: 0.1120 - val_loss: 0.1290
+Epoch 19/100
+91/91 - 40s - loss: 0.1118 - val_loss: 0.1288
+Epoch 20/100
+91/91 - 41s - loss: 0.1111 - val_loss: 0.1262
+Epoch 21/100
+91/91 - 40s - loss: 0.1097 - val_loss: 0.1270
+Epoch 22/100
+91/91 - 41s - loss: 0.1088 - val_loss: 0.1274
+Epoch 23/100
+91/91 - 39s - loss: 0.1089 - val_loss: 0.1299
+Epoch 24/100
+91/91 - 40s - loss: 0.1086 - val_loss: 0.1287
+Epoch 25/100
+91/91 - 40s - loss: 0.1081 - val_loss: 0.1295
+Epoch 26/100
+91/91 - 39s - loss: 0.1069 - val_loss: 0.1290
+Epoch 27/100
+91/91 - 39s - loss: 0.1059 - val_loss: 0.1328
+Epoch 28/100
+91/91 - 38s - loss: 0.1061 - val_loss: 0.1275
+Epoch 29/100
+91/91 - 39s - loss: 0.1040 - val_loss: 0.1294
+Epoch 30/100
+91/91 - 39s - loss: 0.1038 - val_loss: 0.1286
+Epoch 31/100
+91/91 - 40s - loss: 0.1031 - val_loss: 0.1309
+Epoch 32/100
+91/91 - 40s - loss: 0.1017 - val_loss: 0.1324
+Epoch 33/100
+91/91 - 40s - loss: 0.1030 - val_loss: 0.1310
+Epoch 34/100
+91/91 - 40s - loss: 0.1000 - val_loss: 0.1298
+Epoch 35/100
+91/91 - 40s - loss: 0.1000 - val_loss: 0.1325
+Epoch 36/100
+91/91 - 40s - loss: 0.1006 - val_loss: 0.1314
+Epoch 37/100
+91/91 - 40s - loss: 0.0984 - val_loss: 0.1307
+Epoch 38/100
+91/91 - 40s - loss: 0.1002 - val_loss: 0.1319
+Epoch 39/100
+91/91 - 40s - loss: 0.0983 - val_loss: 0.1332
+Epoch 40/100
+91/91 - 40s - loss: 0.0986 - val_loss: 0.1313
+
+##################################################
+#                     RESULT                     #
+##################################################
+
+RMS VALUES: RUN 1, TEST SET
+RMS Raw: 23.726904057577
+RMS BCGNet: 21.215510221359303
+
+FREQUENCY BAND POWER REDUCTION: RUN 1
+Results for Delta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet         638.08        0.854989
+
+Results for Theta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        129.852        0.501221
+
+Results for Alpha band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        122.731        0.538121
+
+________________________________________
+
+Reading /disk1/guangyuan/BCGnet/data/wangchuntong/wangchuntong_r01_raw.fdt
+Reading /disk1/guangyuan/BCGnet/data/wangchuntong/wangchuntong_r01_raw.fdt
+Reading 0 ... 815999  =      0.000 ...  8159.990 secs...
+
+Rejecting 80 epochs out of a total of 2719
+2639 epochs remaining...
+
+Model: "functional_31"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+ecg_input (InputLayer)       [(None, None, 1)]         0         
+_________________________________________________________________
+bidirectional_60 (Bidirectio (None, None, 32)          1824      
+_________________________________________________________________
+bidirectional_61 (Bidirectio (None, None, 32)          4800      
+_________________________________________________________________
+dense_30 (Dense)             (None, None, 8)           264       
+_________________________________________________________________
+dropout_15 (Dropout)         (None, None, 8)           0         
+_________________________________________________________________
+bidirectional_62 (Bidirectio (None, None, 32)          2496      
+_________________________________________________________________
+bidirectional_63 (Bidirectio (None, None, 128)         37632     
+_________________________________________________________________
+dense_31 (Dense)             (None, None, 63)          8127      
+=================================================================
+Total params: 55,143
+Trainable params: 55,143
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+98/98 - 50s - loss: 0.5744 - val_loss: 0.6147
+Epoch 2/100
+98/98 - 45s - loss: 0.5088 - val_loss: 0.5978
+Epoch 3/100
+98/98 - 45s - loss: 0.4897 - val_loss: 0.6106
+Epoch 4/100
+98/98 - 45s - loss: 0.4823 - val_loss: 0.6094
+Epoch 5/100
+98/98 - 44s - loss: 0.4708 - val_loss: 0.5901
+Epoch 6/100
+98/98 - 44s - loss: 0.4650 - val_loss: 0.6346
+Epoch 7/100
+98/98 - 44s - loss: 0.4596 - val_loss: 0.6005
+Epoch 8/100
+98/98 - 44s - loss: 0.4561 - val_loss: 0.6069
+Epoch 9/100
+98/98 - 44s - loss: 0.4486 - val_loss: 0.6006
+Epoch 10/100
+98/98 - 44s - loss: 0.4369 - val_loss: 0.6790
+Epoch 11/100
+98/98 - 43s - loss: 0.4263 - val_loss: 0.6727
+Epoch 12/100
+98/98 - 42s - loss: 0.4352 - val_loss: 0.5822
+Epoch 13/100
+98/98 - 44s - loss: 0.4185 - val_loss: 0.6943
+Epoch 14/100
+98/98 - 44s - loss: 0.4117 - val_loss: 0.6707
+Epoch 15/100
+98/98 - 45s - loss: 0.4113 - val_loss: 0.6155
+Epoch 16/100
+98/98 - 44s - loss: 0.3982 - val_loss: 0.6205
+Epoch 17/100
+98/98 - 45s - loss: 0.3959 - val_loss: 0.6110
+Epoch 18/100
+98/98 - 44s - loss: 0.3850 - val_loss: 0.6616
+Epoch 19/100
+98/98 - 45s - loss: 0.3759 - val_loss: 0.7013
+Epoch 20/100
+98/98 - 44s - loss: 0.3736 - val_loss: 0.6768
+Epoch 21/100
+98/98 - 44s - loss: 0.3660 - val_loss: 0.6768
+Epoch 22/100
+98/98 - 43s - loss: 0.3676 - val_loss: 0.6937
+Epoch 23/100
+98/98 - 44s - loss: 0.3591 - val_loss: 0.5932
+Epoch 24/100
+98/98 - 41s - loss: 0.3671 - val_loss: 0.7382
+Epoch 25/100
+98/98 - 43s - loss: 0.3627 - val_loss: 0.6581
+Epoch 26/100
+98/98 - 43s - loss: 0.3612 - val_loss: 0.6163
+Epoch 27/100
+98/98 - 42s - loss: 0.3456 - val_loss: 0.6771
+Epoch 28/100
+98/98 - 43s - loss: 0.3450 - val_loss: 0.6948
+Epoch 29/100
+98/98 - 44s - loss: 0.3345 - val_loss: 0.6326
+Epoch 30/100
+98/98 - 44s - loss: 0.3279 - val_loss: 0.6531
+Epoch 31/100
+98/98 - 44s - loss: 0.3203 - val_loss: 0.6718
+Epoch 32/100
+98/98 - 44s - loss: 0.3152 - val_loss: 0.6304
+Epoch 33/100
+98/98 - 44s - loss: 0.3180 - val_loss: 0.6589
+Epoch 34/100
+98/98 - 44s - loss: 0.3181 - val_loss: 0.6792
+Epoch 35/100
+98/98 - 44s - loss: 0.3172 - val_loss: 0.6319
+Epoch 36/100
+98/98 - 44s - loss: 0.3136 - val_loss: 0.7604
+Epoch 37/100
+98/98 - 44s - loss: 0.3100 - val_loss: 0.6926
+
+##################################################
+#                     RESULT                     #
+##################################################
+
+RMS VALUES: RUN 1, TEST SET
+RMS Raw: 34.91951151499097
+RMS BCGNet: 31.144126308194476
+
+FREQUENCY BAND POWER REDUCTION: RUN 1
+Results for Delta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        1335.56        0.861768
+
+Results for Theta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        164.518        0.415191
+
+Results for Alpha band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        92.9999        0.373067
+
+________________________________________
+
+Reading /disk1/guangyuan/BCGnet/data/zhangaijing/zhangaijing_r01_raw.fdt
+Reading /disk1/guangyuan/BCGnet/data/zhangaijing/zhangaijing_r01_raw.fdt
+Reading 0 ... 719999  =      0.000 ...  7199.990 secs...
+
+Rejecting 89 epochs out of a total of 2399
+2310 epochs remaining...
+
+Model: "functional_33"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+ecg_input (InputLayer)       [(None, None, 1)]         0         
+_________________________________________________________________
+bidirectional_64 (Bidirectio (None, None, 32)          1824      
+_________________________________________________________________
+bidirectional_65 (Bidirectio (None, None, 32)          4800      
+_________________________________________________________________
+dense_32 (Dense)             (None, None, 8)           264       
+_________________________________________________________________
+dropout_16 (Dropout)         (None, None, 8)           0         
+_________________________________________________________________
+bidirectional_66 (Bidirectio (None, None, 32)          2496      
+_________________________________________________________________
+bidirectional_67 (Bidirectio (None, None, 128)         37632     
+_________________________________________________________________
+dense_33 (Dense)             (None, None, 63)          8127      
+=================================================================
+Total params: 55,143
+Trainable params: 55,143
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+97/97 - 48s - loss: 0.3287 - val_loss: 0.2977
+Epoch 2/100
+97/97 - 45s - loss: 0.2943 - val_loss: 0.2908
+Epoch 3/100
+97/97 - 44s - loss: 0.2868 - val_loss: 0.2902
+Epoch 4/100
+97/97 - 44s - loss: 0.2824 - val_loss: 0.2834
+Epoch 5/100
+97/97 - 43s - loss: 0.2799 - val_loss: 0.2822
+Epoch 6/100
+97/97 - 43s - loss: 0.2785 - val_loss: 0.2847
+Epoch 7/100
+97/97 - 43s - loss: 0.2749 - val_loss: 0.2851
+Epoch 8/100
+97/97 - 43s - loss: 0.2733 - val_loss: 0.2813
+Epoch 9/100
+97/97 - 43s - loss: 0.2696 - val_loss: 0.2923
+Epoch 10/100
+97/97 - 43s - loss: 0.2676 - val_loss: 0.2882
+Epoch 11/100
+97/97 - 42s - loss: 0.2652 - val_loss: 0.2852
+Epoch 12/100
+97/97 - 43s - loss: 0.2636 - val_loss: 0.2851
+Epoch 13/100
+97/97 - 42s - loss: 0.2602 - val_loss: 0.2870
+Epoch 14/100
+97/97 - 43s - loss: 0.2573 - val_loss: 0.2854
+Epoch 15/100
+97/97 - 43s - loss: 0.2573 - val_loss: 0.2846
+Epoch 16/100
+97/97 - 43s - loss: 0.2547 - val_loss: 0.2858
+Epoch 17/100
+97/97 - 43s - loss: 0.2524 - val_loss: 0.2915
+Epoch 18/100
+97/97 - 43s - loss: 0.2520 - val_loss: 0.2837
+Epoch 19/100
+97/97 - 43s - loss: 0.2548 - val_loss: 0.2909
+Epoch 20/100
+97/97 - 43s - loss: 0.2481 - val_loss: 0.2965
+Epoch 21/100
+97/97 - 42s - loss: 0.2438 - val_loss: 0.2873
+Epoch 22/100
+97/97 - 42s - loss: 0.2406 - val_loss: 0.3063
+Epoch 23/100
+97/97 - 42s - loss: 0.2407 - val_loss: 0.3022
+Epoch 24/100
+97/97 - 39s - loss: 0.2397 - val_loss: 0.3063
+Epoch 25/100
+97/97 - 41s - loss: 0.2386 - val_loss: 0.3037
+Epoch 26/100
+97/97 - 43s - loss: 0.2424 - val_loss: 0.3008
+Epoch 27/100
+97/97 - 43s - loss: 0.2327 - val_loss: 0.3029
+Epoch 28/100
+97/97 - 45s - loss: 0.2342 - val_loss: 0.2905
+Epoch 29/100
+97/97 - 45s - loss: 0.2289 - val_loss: 0.2942
+Epoch 30/100
+97/97 - 44s - loss: 0.2245 - val_loss: 0.2971
+Epoch 31/100
+97/97 - 44s - loss: 0.2208 - val_loss: 0.2916
+Epoch 32/100
+97/97 - 43s - loss: 0.2252 - val_loss: 0.2948
+Epoch 33/100
+97/97 - 46s - loss: 0.2208 - val_loss: 0.2934
+
+##################################################
+#                     RESULT                     #
+##################################################
+
+RMS VALUES: RUN 1, TEST SET
+RMS Raw: 27.706083817486547
+RMS BCGNet: 25.340043094893165
+
+FREQUENCY BAND POWER REDUCTION: RUN 1
+Results for Delta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        784.265        0.849058
+
+Results for Theta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        136.502        0.494533
+
+Results for Alpha band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        83.0054        0.433448
+
+________________________________________
+
+Reading /disk1/guangyuan/BCGnet/data/zhangqiang/zhangqiang_r01_raw.fdt
+Reading /disk1/guangyuan/BCGnet/data/zhangqiang/zhangqiang_r01_raw.fdt
+Reading 0 ... 815999  =      0.000 ...  8159.990 secs...
+
+Rejecting 251 epochs out of a total of 2719
+2468 epochs remaining...
+
+Model: "functional_35"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+ecg_input (InputLayer)       [(None, None, 1)]         0         
+_________________________________________________________________
+bidirectional_68 (Bidirectio (None, None, 32)          1824      
+_________________________________________________________________
+bidirectional_69 (Bidirectio (None, None, 32)          4800      
+_________________________________________________________________
+dense_34 (Dense)             (None, None, 8)           264       
+_________________________________________________________________
+dropout_17 (Dropout)         (None, None, 8)           0         
+_________________________________________________________________
+bidirectional_70 (Bidirectio (None, None, 32)          2496      
+_________________________________________________________________
+bidirectional_71 (Bidirectio (None, None, 128)         37632     
+_________________________________________________________________
+dense_35 (Dense)             (None, None, 63)          8127      
+=================================================================
+Total params: 55,143
+Trainable params: 55,143
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+91/91 - 46s - loss: 0.5047 - val_loss: 0.4604
+Epoch 2/100
+91/91 - 48s - loss: 0.4367 - val_loss: 0.4457
+Epoch 3/100
+91/91 - 42s - loss: 0.4224 - val_loss: 0.4472
+Epoch 4/100
+91/91 - 42s - loss: 0.4140 - val_loss: 0.4424
+Epoch 5/100
+91/91 - 41s - loss: 0.4071 - val_loss: 0.4402
+Epoch 6/100
+91/91 - 41s - loss: 0.4050 - val_loss: 0.4600
+Epoch 7/100
+91/91 - 40s - loss: 0.4022 - val_loss: 0.4416
+Epoch 8/100
+91/91 - 41s - loss: 0.3952 - val_loss: 0.4389
+Epoch 9/100
+91/91 - 41s - loss: 0.3867 - val_loss: 0.4347
+Epoch 10/100
+91/91 - 40s - loss: 0.3853 - val_loss: 0.4390
+Epoch 11/100
+91/91 - 41s - loss: 0.3807 - val_loss: 0.4371
+Epoch 12/100
+91/91 - 41s - loss: 0.3810 - val_loss: 0.4335
+Epoch 13/100
+91/91 - 40s - loss: 0.3824 - val_loss: 0.4406
+Epoch 14/100
+91/91 - 40s - loss: 0.3794 - val_loss: 0.4406
+Epoch 15/100
+91/91 - 39s - loss: 0.3714 - val_loss: 0.4438
+Epoch 16/100
+91/91 - 39s - loss: 0.3632 - val_loss: 0.4578
+Epoch 17/100
+91/91 - 39s - loss: 0.3619 - val_loss: 0.4481
+Epoch 18/100
+91/91 - 40s - loss: 0.3638 - val_loss: 0.4480
+Epoch 19/100
+91/91 - 41s - loss: 0.3561 - val_loss: 0.4468
+Epoch 20/100
+91/91 - 40s - loss: 0.3549 - val_loss: 0.4415
+Epoch 21/100
+91/91 - 41s - loss: 0.3580 - val_loss: 0.4555
+Epoch 22/100
+91/91 - 41s - loss: 0.3547 - val_loss: 0.4369
+Epoch 23/100
+91/91 - 41s - loss: 0.3450 - val_loss: 0.4429
+Epoch 24/100
+91/91 - 42s - loss: 0.3510 - val_loss: 0.4417
+Epoch 25/100
+91/91 - 40s - loss: 0.3584 - val_loss: 0.4508
+Epoch 26/100
+91/91 - 41s - loss: 0.3409 - val_loss: 0.4675
+Epoch 27/100
+91/91 - 40s - loss: 0.3341 - val_loss: 0.4517
+Epoch 28/100
+91/91 - 41s - loss: 0.3301 - val_loss: 0.4613
+Epoch 29/100
+91/91 - 40s - loss: 0.3266 - val_loss: 0.4434
+Epoch 30/100
+91/91 - 40s - loss: 0.3214 - val_loss: 0.4640
+Epoch 31/100
+91/91 - 40s - loss: 0.3202 - val_loss: 0.4527
+Epoch 32/100
+91/91 - 40s - loss: 0.3220 - val_loss: 0.4543
+Epoch 33/100
+91/91 - 40s - loss: 0.3123 - val_loss: 0.4528
+Epoch 34/100
+91/91 - 39s - loss: 0.3114 - val_loss: 0.4622
+Epoch 35/100
+91/91 - 39s - loss: 0.3075 - val_loss: 0.4797
+Epoch 36/100
+91/91 - 39s - loss: 0.3110 - val_loss: 0.4621
+Epoch 37/100
+91/91 - 39s - loss: 0.3070 - val_loss: 0.4671
+
+##################################################
+#                     RESULT                     #
+##################################################
+
+RMS VALUES: RUN 1, TEST SET
+RMS Raw: 26.906362727871368
+RMS BCGNet: 23.16846387520461
+
+FREQUENCY BAND POWER REDUCTION: RUN 1
+Results for Delta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        650.539        0.710874
+
+Results for Theta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        101.885         0.44369
+
+Results for Alpha band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        83.8872        0.394258
+
+________________________________________
+
+Reading /disk1/guangyuan/BCGnet/data/zhangxi/zhangxi_r01_raw.fdt
+Reading /disk1/guangyuan/BCGnet/data/zhangxi/zhangxi_r01_raw.fdt
+Reading 0 ... 416999  =      0.000 ...  4169.990 secs...
+
+Rejecting 12 epochs out of a total of 1389
+1377 epochs remaining...
+
+Model: "functional_37"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+ecg_input (InputLayer)       [(None, None, 1)]         0         
+_________________________________________________________________
+bidirectional_72 (Bidirectio (None, None, 32)          1824      
+_________________________________________________________________
+bidirectional_73 (Bidirectio (None, None, 32)          4800      
+_________________________________________________________________
+dense_36 (Dense)             (None, None, 8)           264       
+_________________________________________________________________
+dropout_18 (Dropout)         (None, None, 8)           0         
+_________________________________________________________________
+bidirectional_74 (Bidirectio (None, None, 32)          2496      
+_________________________________________________________________
+bidirectional_75 (Bidirectio (None, None, 128)         37632     
+_________________________________________________________________
+dense_37 (Dense)             (None, None, 63)          8127      
+=================================================================
+Total params: 55,143
+Trainable params: 55,143
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+99/99 - 47s - loss: 0.8467 - val_loss: 0.8083
+Epoch 2/100
+99/99 - 43s - loss: 0.7997 - val_loss: 0.8037
+Epoch 3/100
+99/99 - 42s - loss: 0.7807 - val_loss: 0.8199
+Epoch 4/100
+99/99 - 46s - loss: 0.7679 - val_loss: 0.8024
+Epoch 5/100
+99/99 - 47s - loss: 0.7561 - val_loss: 0.8118
+Epoch 6/100
+99/99 - 49s - loss: 0.7439 - val_loss: 0.8263
+Epoch 7/100
+99/99 - 48s - loss: 0.7238 - val_loss: 0.8118
+Epoch 8/100
+99/99 - 47s - loss: 0.7159 - val_loss: 0.8168
+Epoch 9/100
+99/99 - 48s - loss: 0.7045 - val_loss: 0.8111
+Epoch 10/100
+99/99 - 48s - loss: 0.6954 - val_loss: 0.8195
+Epoch 11/100
+99/99 - 47s - loss: 0.6831 - val_loss: 0.8572
+Epoch 12/100
+99/99 - 47s - loss: 0.6778 - val_loss: 0.8554
+Epoch 13/100
+99/99 - 48s - loss: 0.6729 - val_loss: 0.8393
+Epoch 14/100
+99/99 - 48s - loss: 0.6581 - val_loss: 0.8315
+Epoch 15/100
+99/99 - 44s - loss: 0.6531 - val_loss: 0.8297
+Epoch 16/100
+99/99 - 44s - loss: 0.6353 - val_loss: 0.8456
+Epoch 17/100
+99/99 - 45s - loss: 0.6221 - val_loss: 0.8360
+Epoch 18/100
+99/99 - 45s - loss: 0.6182 - val_loss: 0.8561
+Epoch 19/100
+99/99 - 46s - loss: 0.6121 - val_loss: 0.8378
+Epoch 20/100
+99/99 - 46s - loss: 0.6027 - val_loss: 0.8667
+Epoch 21/100
+99/99 - 46s - loss: 0.5928 - val_loss: 0.8911
+Epoch 22/100
+99/99 - 47s - loss: 0.5922 - val_loss: 0.8828
+Epoch 23/100
+99/99 - 47s - loss: 0.5889 - val_loss: 0.8524
+Epoch 24/100
+99/99 - 43s - loss: 0.5788 - val_loss: 0.8580
+Epoch 25/100
+99/99 - 47s - loss: 0.5884 - val_loss: 0.8562
+Epoch 26/100
+99/99 - 47s - loss: 0.5674 - val_loss: 0.8673
+Epoch 27/100
+99/99 - 46s - loss: 0.5515 - val_loss: 0.8573
+Epoch 28/100
+99/99 - 47s - loss: 0.5598 - val_loss: 0.8720
+Epoch 29/100
+99/99 - 46s - loss: 0.5377 - val_loss: 0.9027
+
+##################################################
+#                     RESULT                     #
+##################################################
+
+RMS VALUES: RUN 1, TEST SET
+RMS Raw: 38.56912484349053
+RMS BCGNet: 33.70521376404283
+
+FREQUENCY BAND POWER REDUCTION: RUN 1
+Results for Delta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        2240.88        0.741434
+
+Results for Theta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        281.247        0.556105
+
+Results for Alpha band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        166.073        0.801898
+
+________________________________________
+
+Reading /disk1/guangyuan/BCGnet/data/zhaoyuanxin/zhaoyuanxin_r01_raw.fdt
+Reading /disk1/guangyuan/BCGnet/data/zhaoyuanxin/zhaoyuanxin_r01_raw.fdt
+Reading 0 ... 752999  =      0.000 ...  7529.990 secs...
+
+Rejecting 6 epochs out of a total of 2509
+2503 epochs remaining...
+
+Model: "functional_39"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+ecg_input (InputLayer)       [(None, None, 1)]         0         
+_________________________________________________________________
+bidirectional_76 (Bidirectio (None, None, 32)          1824      
+_________________________________________________________________
+bidirectional_77 (Bidirectio (None, None, 32)          4800      
+_________________________________________________________________
+dense_38 (Dense)             (None, None, 8)           264       
+_________________________________________________________________
+dropout_19 (Dropout)         (None, None, 8)           0         
+_________________________________________________________________
+bidirectional_78 (Bidirectio (None, None, 32)          2496      
+_________________________________________________________________
+bidirectional_79 (Bidirectio (None, None, 128)         37632     
+_________________________________________________________________
+dense_39 (Dense)             (None, None, 63)          8127      
+=================================================================
+Total params: 55,143
+Trainable params: 55,143
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+100/100 - 48s - loss: 0.8241 - val_loss: 0.7134
+Epoch 2/100
+100/100 - 47s - loss: 0.7602 - val_loss: 0.7137
+Epoch 3/100
+100/100 - 46s - loss: 0.7390 - val_loss: 0.6784
+Epoch 4/100
+100/100 - 46s - loss: 0.7246 - val_loss: 0.6957
+Epoch 5/100
+100/100 - 46s - loss: 0.7147 - val_loss: 0.6723
+Epoch 6/100
+100/100 - 47s - loss: 0.6931 - val_loss: 0.6774
+Epoch 7/100
+100/100 - 46s - loss: 0.6844 - val_loss: 0.6716
+Epoch 8/100
+100/100 - 47s - loss: 0.6746 - val_loss: 0.6686
+Epoch 9/100
+100/100 - 47s - loss: 0.6639 - val_loss: 0.6752
+Epoch 10/100
+100/100 - 47s - loss: 0.6494 - val_loss: 0.6824
+Epoch 11/100
+100/100 - 48s - loss: 0.6563 - val_loss: 0.6745
+Epoch 12/100
+100/100 - 48s - loss: 0.6322 - val_loss: 0.6540
+Epoch 13/100
+100/100 - 50s - loss: 0.6176 - val_loss: 0.6763
+Epoch 14/100
+100/100 - 49s - loss: 0.6177 - val_loss: 0.6853
+Epoch 15/100
+100/100 - 50s - loss: 0.6490 - val_loss: 0.6698
+Epoch 16/100
+100/100 - 50s - loss: 0.6244 - val_loss: 0.6766
+Epoch 17/100
+100/100 - 52s - loss: 0.6057 - val_loss: 0.6902
+Epoch 18/100
+100/100 - 52s - loss: 0.5932 - val_loss: 0.6713
+Epoch 19/100
+100/100 - 51s - loss: 0.5868 - val_loss: 0.6848
+Epoch 20/100
+100/100 - 51s - loss: 0.5733 - val_loss: 0.6691
+Epoch 21/100
+100/100 - 55s - loss: 0.5726 - val_loss: 0.6758
+Epoch 22/100
+100/100 - 55s - loss: 0.5575 - val_loss: 0.6661
+Epoch 23/100
+100/100 - 55s - loss: 0.5534 - val_loss: 0.6721
+Epoch 24/100
+100/100 - 57s - loss: 0.5472 - val_loss: 0.6734
+Epoch 25/100
+100/100 - 55s - loss: 0.5520 - val_loss: 0.6877
+Epoch 26/100
+100/100 - 56s - loss: 0.5617 - val_loss: 0.6716
+Epoch 27/100
+100/100 - 55s - loss: 0.5378 - val_loss: 0.6738
+Epoch 28/100
+100/100 - 55s - loss: 0.5253 - val_loss: 0.6822
+Epoch 29/100
+100/100 - 55s - loss: 0.5577 - val_loss: 0.7010
+Epoch 30/100
+100/100 - 53s - loss: 0.5380 - val_loss: 0.6760
+Epoch 31/100
+100/100 - 53s - loss: 0.5192 - val_loss: 0.6663
+Epoch 32/100
+100/100 - 50s - loss: 0.5090 - val_loss: 0.6891
+Epoch 33/100
+100/100 - 49s - loss: 0.5006 - val_loss: 0.6825
+Epoch 34/100
+100/100 - 52s - loss: 0.4990 - val_loss: 0.6959
+Epoch 35/100
+100/100 - 51s - loss: 0.4827 - val_loss: 0.7067
+Epoch 36/100
+100/100 - 53s - loss: 0.4863 - val_loss: 0.6778
+Epoch 37/100
+100/100 - 55s - loss: 0.4826 - val_loss: 0.6871
+
+##################################################
+#                     RESULT                     #
+##################################################
+
+RMS VALUES: RUN 1, TEST SET
+RMS Raw: 38.43691301239727
+RMS BCGNet: 33.48078774504687
+
+FREQUENCY BAND POWER REDUCTION: RUN 1
+Results for Delta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet         1903.6        0.805766
+
+Results for Theta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        325.017        0.506551
+
+Results for Alpha band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        206.671         0.43388
+
+________________________________________
+
+Reading /disk1/guangyuan/BCGnet/data/mating/mating_r01_raw.fdt
+Reading /disk1/guangyuan/BCGnet/data/mating/mating_r01_raw.fdt
+Reading 0 ... 815999  =      0.000 ...  8159.990 secs...
+
+Rejecting 285 epochs out of a total of 2719
+2434 epochs remaining...
+
+Model: "functional_41"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+ecg_input (InputLayer)       [(None, None, 1)]         0         
+_________________________________________________________________
+bidirectional_80 (Bidirectio (None, None, 32)          1824      
+_________________________________________________________________
+bidirectional_81 (Bidirectio (None, None, 32)          4800      
+_________________________________________________________________
+dense_40 (Dense)             (None, None, 8)           264       
+_________________________________________________________________
+dropout_20 (Dropout)         (None, None, 8)           0         
+_________________________________________________________________
+bidirectional_82 (Bidirectio (None, None, 32)          2496      
+_________________________________________________________________
+bidirectional_83 (Bidirectio (None, None, 128)         37632     
+_________________________________________________________________
+dense_41 (Dense)             (None, None, 63)          8127      
+=================================================================
+Total params: 55,143
+Trainable params: 55,143
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+90/90 - 50s - loss: 0.3745 - val_loss: 0.3204
+Epoch 2/100
+90/90 - 48s - loss: 0.3331 - val_loss: 0.3177
+Epoch 3/100
+90/90 - 48s - loss: 0.3217 - val_loss: 0.3129
+Epoch 4/100
+90/90 - 48s - loss: 0.3138 - val_loss: 0.3091
+Epoch 5/100
+90/90 - 48s - loss: 0.3106 - val_loss: 0.3122
+Epoch 6/100
+90/90 - 47s - loss: 0.3051 - val_loss: 0.3084
+Epoch 7/100
+90/90 - 45s - loss: 0.3008 - val_loss: 0.3123
+Epoch 8/100
+90/90 - 45s - loss: 0.3005 - val_loss: 0.3133
+Epoch 9/100
+90/90 - 45s - loss: 0.2989 - val_loss: 0.3064
+Epoch 10/100
+90/90 - 43s - loss: 0.2926 - val_loss: 0.3048
+Epoch 11/100
+90/90 - 45s - loss: 0.2892 - val_loss: 0.3055
+Epoch 12/100
+90/90 - 46s - loss: 0.2868 - val_loss: 0.3042
+Epoch 13/100
+90/90 - 46s - loss: 0.2817 - val_loss: 0.3098
+Epoch 14/100
+90/90 - 46s - loss: 0.2790 - val_loss: 0.3070
+Epoch 15/100
+90/90 - 40s - loss: 0.2766 - val_loss: 0.3076
+Epoch 16/100
+90/90 - 40s - loss: 0.2712 - val_loss: 0.3107
+Epoch 17/100
+90/90 - 41s - loss: 0.2680 - val_loss: 0.3074
+Epoch 18/100
+90/90 - 39s - loss: 0.2662 - val_loss: 0.3064
+Epoch 19/100
+90/90 - 40s - loss: 0.2636 - val_loss: 0.3055
+Epoch 20/100
+90/90 - 41s - loss: 0.2626 - val_loss: 0.3117
+Epoch 21/100
+90/90 - 41s - loss: 0.2583 - val_loss: 0.3102
+Epoch 22/100
+90/90 - 41s - loss: 0.2580 - val_loss: 0.3103
+Epoch 23/100
+90/90 - 41s - loss: 0.2537 - val_loss: 0.3124
+Epoch 24/100
+90/90 - 42s - loss: 0.2536 - val_loss: 0.3138
+Epoch 25/100
+90/90 - 40s - loss: 0.2521 - val_loss: 0.3127
+Epoch 26/100
+90/90 - 39s - loss: 0.2474 - val_loss: 0.3150
+Epoch 27/100
+90/90 - 41s - loss: 0.2451 - val_loss: 0.3126
+Epoch 28/100
+90/90 - 39s - loss: 0.2430 - val_loss: 0.3128
+Epoch 29/100
+90/90 - 39s - loss: 0.2451 - val_loss: 0.3148
+Epoch 30/100
+90/90 - 40s - loss: 0.2420 - val_loss: 0.3164
+Epoch 31/100
+90/90 - 42s - loss: 0.2372 - val_loss: 0.3173
+Epoch 32/100
+90/90 - 41s - loss: 0.2433 - val_loss: 0.3192
+Epoch 33/100
+90/90 - 41s - loss: 0.2429 - val_loss: 0.3158
+Epoch 34/100
+90/90 - 42s - loss: 0.2378 - val_loss: 0.3145
+Epoch 35/100
+90/90 - 41s - loss: 0.2352 - val_loss: 0.3150
+Epoch 36/100
+90/90 - 40s - loss: 0.2304 - val_loss: 0.3147
+Epoch 37/100
+90/90 - 38s - loss: 0.2304 - val_loss: 0.3178
+
+##################################################
+#                     RESULT                     #
+##################################################
+
+RMS VALUES: RUN 1, TEST SET
+RMS Raw: 38.78770494081566
+RMS BCGNet: 33.23115105434033
+
+FREQUENCY BAND POWER REDUCTION: RUN 1
+Results for Delta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        1645.85         0.70531
+
+Results for Theta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        430.311        0.574144
+
+Results for Alpha band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        232.935         0.51592
+
+________________________________________
+
+Reading /disk1/guangyuan/BCGnet/data/xuandongqing/xuandongqing_r01_raw.fdt
+Reading /disk1/guangyuan/BCGnet/data/xuandongqing/xuandongqing_r01_raw.fdt
+Reading 0 ... 815999  =      0.000 ...  8159.990 secs...
+
+Rejecting 79 epochs out of a total of 2719
+2640 epochs remaining...
+
+Model: "functional_43"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+ecg_input (InputLayer)       [(None, None, 1)]         0         
+_________________________________________________________________
+bidirectional_84 (Bidirectio (None, None, 32)          1824      
+_________________________________________________________________
+bidirectional_85 (Bidirectio (None, None, 32)          4800      
+_________________________________________________________________
+dense_42 (Dense)             (None, None, 8)           264       
+_________________________________________________________________
+dropout_21 (Dropout)         (None, None, 8)           0         
+_________________________________________________________________
+bidirectional_86 (Bidirectio (None, None, 32)          2496      
+_________________________________________________________________
+bidirectional_87 (Bidirectio (None, None, 128)         37632     
+_________________________________________________________________
+dense_43 (Dense)             (None, None, 63)          8127      
+=================================================================
+Total params: 55,143
+Trainable params: 55,143
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100
+98/98 - 46s - loss: 0.3190 - val_loss: 0.3013
+Epoch 2/100
+98/98 - 44s - loss: 0.2761 - val_loss: 0.2930
+Epoch 3/100
+98/98 - 42s - loss: 0.2680 - val_loss: 0.2905
+Epoch 4/100
+98/98 - 43s - loss: 0.2644 - val_loss: 0.2896
+Epoch 5/100
+98/98 - 42s - loss: 0.2611 - val_loss: 0.2875
+Epoch 6/100
+98/98 - 42s - loss: 0.2598 - val_loss: 0.2864
+Epoch 7/100
+98/98 - 43s - loss: 0.2568 - val_loss: 0.2894
+Epoch 8/100
+98/98 - 43s - loss: 0.2561 - val_loss: 0.2852
+Epoch 9/100
+98/98 - 43s - loss: 0.2540 - val_loss: 0.2858
+Epoch 10/100
+98/98 - 42s - loss: 0.2524 - val_loss: 0.2853
+Epoch 11/100
+98/98 - 43s - loss: 0.2490 - val_loss: 0.2841
+Epoch 12/100
+98/98 - 43s - loss: 0.2499 - val_loss: 0.2821
+Epoch 13/100
+98/98 - 44s - loss: 0.2461 - val_loss: 0.2860
+Epoch 14/100
+98/98 - 44s - loss: 0.2445 - val_loss: 0.2870
+Epoch 15/100
+98/98 - 43s - loss: 0.2438 - val_loss: 0.2850
+Epoch 16/100
+98/98 - 43s - loss: 0.2426 - val_loss: 0.2864
+Epoch 17/100
+98/98 - 43s - loss: 0.2391 - val_loss: 0.2893
+Epoch 18/100
+98/98 - 44s - loss: 0.2384 - val_loss: 0.2856
+Epoch 19/100
+98/98 - 43s - loss: 0.2368 - val_loss: 0.2903
+Epoch 20/100
+98/98 - 44s - loss: 0.2356 - val_loss: 0.2908
+Epoch 21/100
+98/98 - 44s - loss: 0.2350 - val_loss: 0.2872
+Epoch 22/100
+98/98 - 43s - loss: 0.2332 - val_loss: 0.2881
+Epoch 23/100
+98/98 - 44s - loss: 0.2298 - val_loss: 0.2929
+Epoch 24/100
+98/98 - 43s - loss: 0.2274 - val_loss: 0.2848
+Epoch 25/100
+98/98 - 43s - loss: 0.2254 - val_loss: 0.2965
+Epoch 26/100
+98/98 - 44s - loss: 0.2252 - val_loss: 0.2961
+Epoch 27/100
+98/98 - 44s - loss: 0.2225 - val_loss: 0.2841
+Epoch 28/100
+98/98 - 44s - loss: 0.2182 - val_loss: 0.2941
+Epoch 29/100
+98/98 - 43s - loss: 0.2150 - val_loss: 0.2982
+Epoch 30/100
+98/98 - 44s - loss: 0.2146 - val_loss: 0.2926
+Epoch 31/100
+98/98 - 44s - loss: 0.2179 - val_loss: 0.2908
+Epoch 32/100
+98/98 - 44s - loss: 0.2106 - val_loss: 0.2934
+Epoch 33/100
+98/98 - 44s - loss: 0.2052 - val_loss: 0.2950
+Epoch 34/100
+98/98 - 44s - loss: 0.2069 - val_loss: 0.2955
+Epoch 35/100
+98/98 - 44s - loss: 0.2021 - val_loss: 0.3077
+Epoch 36/100
+98/98 - 44s - loss: 0.2016 - val_loss: 0.3062
+Epoch 37/100
+98/98 - 44s - loss: 0.2018 - val_loss: 0.3017
+
+##################################################
+#                     RESULT                     #
+##################################################
+
+RMS VALUES: RUN 1, TEST SET
+RMS Raw: 25.75532847477804
+RMS BCGNet: 20.68158491493223
+
+FREQUENCY BAND POWER REDUCTION: RUN 1
+Results for Delta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        730.326        0.745924
+
+Results for Theta band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        167.583        0.313503
+
+Results for Alpha band
+Type      Total Power    Ratio to Raw
+------  -------------  --------------
+BCGNet        92.2552        0.503184
+
+________________________________________
+
+2021-12-20 09:12:16

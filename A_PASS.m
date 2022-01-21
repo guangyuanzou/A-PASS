@@ -264,6 +264,7 @@ if v==0
     set(s.FC_check,'enable','off');
     set(s.ROIadd_button,'enable','off');
     set(s.ROIremove_button,'enable','off');
+    A_Cfg.dicom2nii = 0;
 else
     set(s.dicom2nii_check,'enable','on');
     set(s.metric_check,'enable','on')
@@ -277,6 +278,7 @@ else
     set(s.ROIremove_button,'enable','on');
 end
 A_Cfg.fmriproc = (get(hObject,'value'));
+
 
 function dicom2nii_check_callback(hObject,eventdata,s);
 global A_Cfg
@@ -566,7 +568,7 @@ pause(0.5)
 rtpath = Cfg.working_dir;
 
 if isempty(Cfg.subs)
-    subs_dir = dir([rtpath,'sub*']);
+    subs_dir = dir([rtpath,'/sub*']);
     subs = [];
     for i = 1:length(subs_dir)
         subs=[subs,' ',subs_dir(i).name];
@@ -578,7 +580,7 @@ else
         subs = [subs,' sub',num2str(subs_n(i),'%02d')];
     end
 end
-
+subs
 cd(rtpath)
 delete('pval.txt');
 fi = fopen('pval.txt','w');
