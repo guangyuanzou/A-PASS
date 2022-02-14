@@ -24,6 +24,7 @@ python -c 'import tensorflow as tf; print(tf.__version__)'
 
 Data arrangement
 
+```
 Working dirctory  
   |-sub1  
   |   -subject1_sleep1.eeg  
@@ -44,3 +45,4 @@ Working dirctory
   |...   
   |-subN  
   |coviartes.xlsx (if applicable)  
+```
