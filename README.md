@@ -26,21 +26,21 @@ Data arrangement
 
 Working dirctory  
   |-sub1  
-  |   -subject1_sleep1.eeg
-  |   -subject1_sleep1.vhdr
-  |   -subject1_sleep1.vmrk
-  |   -subject1_sleep2.eeg
-  |   -subject1_sleep2.vhdr
-  |   -subject1_sleep2.vmrk
-  |   ...
-  |   -dcmsorted
-  |      -T1
-  |      -Sleep1
-  |        -xxx.dcm
-  |        ...
-  |      -Sleep2
-  |      ...
-  |-sub2
-  |...
-  |-subN
-  |coviartes.xlsx (if applicable)
+  |   -subject1_sleep1.eeg  
+  |   -subject1_sleep1.vhdr  
+  |   -subject1_sleep1.vmrk  
+  |   -subject1_sleep2.eeg  
+  |   -subject1_sleep2.vhdr  
+  |   -subject1_sleep2.vmrk  
+  |   ...  
+  |   -dcmsorted  
+  |      -T1  
+  |      -Sleep1  
+  |        -xxx.dcm  
+  |        ...  
+  |      -Sleep2  
+  |      ...  
+  |-sub2  
+  |...  
+  |-subN  
+  |coviartes.xlsx (if applicable)  
