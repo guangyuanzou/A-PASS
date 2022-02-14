@@ -34,6 +34,9 @@ Working dirctory
   |   -subject1_sleep2.vhdr  
   |   -subject1_sleep2.vmrk  
   |   ...  
+  |   -subject1_sleepN.eeg  
+  |   -subject1_sleepN.vhdr  
+  |   -subject1_sleepN.vmrk 
   |   -dcmsorted  
   |      -T1  
   |      -Sleep1  
@@ -41,6 +44,7 @@ Working dirctory
   |        ...  
   |      -Sleep2  
   |      ...  
+  |      -SleepN
   |-sub2  
   |...   
   |-subN  
