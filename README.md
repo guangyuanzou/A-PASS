@@ -1,5 +1,5 @@
 # A-PASS
-A pipeline to automatically process and analyze simultaneously acquired EEG-fMRI data for sleep research
+A robust pipeline to automatically process and analyze simultaneously acquired EEG-fMRI data for sleep research
 ## Installation
 1. Download the master branch.
 2. Set up Python environment.
